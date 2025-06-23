@@ -1,0 +1,152 @@
+.dark-20,
+.dark-mode {
+    background: #35424C !important;
+}
+
+.dark-40 {
+    background: #1C242A !important;
+}
+
+body,
+.dark-60,
+.news-tabs .nav-tabs a.active {
+    background: #1c2931 !important;
+}
+
+.dark-80 {
+    background: #2F3841 !important;
+}
+
+.dark-100,
+.latest-news .rowbox .news-tabs .nav-tabs a {
+    background: #4E5A61;
+}
+
+.mediagroup-item .slider-container .category {
+    background: #020220;
+}
+
+.articles-editor .inner .title,
+.application .title,
+.interloc .title {
+    color: #000 !important;
+}
+
+.latest-news .rowbox .news-tabs .nav-tabs li a.active {
+    border: 1px solid #1c2931;
+    border-bottom: 0px;
+}
+
+.application-item .download .app-icons a img,
+.application-item .logo img {
+    filter: brightness(0) invert(1);
+}
+
+.application-item::before {
+    opacity: 0.3;
+}
+
+.title,
+a.title,
+.title a,
+.advertising-banner .line p,
+.bn-news ul li a,
+.menu-item a,
+.tools-date .date,
+.searchicon span,
+nav.list-search a,
+.weather li,
+.changecolors p,
+.news-tabs .choosedays p,
+.news-tabs .choosedays .listdays li,
+.news-tabs .nav-tabs a,
+.numbered-news li::before,
+.listlinks a,
+.resultsnumber,
+.resultssports ul li .text .team i,
+.modal-header p,
+.footer .icons .flex p,
+.footer .item .navmenu a,
+.form-control {
+    color: #fff !important;
+}
+
+a.title:hover,
+.submenu a:hover,
+nav.list-search a:hover,
+.itemscroll .listnews a:hover .title,
+.footer .item .navmenu a:hover {
+    color: #0095DA !important;
+}
+
+.header .site-menu .menu-link svg,
+.header .site-actions .icons .searchicon svg,
+.header .site-menu .dark-mode li.wight svg,
+.header .site-menu .dark-mode li.blak svg,
+.modal-dialog .modal-content .rowinner .item .title svg path {
+    fill: #fff;
+}
+
+.header .site-actions .showboxsearch nav.list-search a:hover {
+    background: #fbfbfb14;
+}
+
+.header .burger-line {
+    background: #fff;
+}
+
+.form-control::placeholder {
+    color: #fff !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+.form-control::-ms-input-placeholder {
+    /* Edge 12 -18 */
+    color: #fff !important;
+}
+
+.header .site-menu .dark-mode li.wight,
+.banner-item,
+.sweeteners-item,
+nav.navbar.dark-40 {
+    background: none !important;
+}
+
+.slider-news__item .news-slider .rowinner .itemscroll .listnews a p {
+    color: #8f8c8c;
+}
+
+.slider-news__item .news-slider .rowinner .itemscroll .circle::before {
+    box-shadow: inset 0 0 0px 3px #1c2931;
+}
+
+.logo-b {
+    display: none;
+}
+
+.logo-w {
+    display: block !important;
+}
+
+@media (max-width: 1199px) {
+    .latest-news .rowbox .news-tabs .tab-content .numbered-news li::before {
+        color: #0095DA !important;
+    }
+}
+
+@media (max-width: 999px) {
+    nav.navbar.dark-40 {
+        background: #1C242A !important;
+    }
+    .application-item {
+        background: #CFEBF8 !important;
+    }
+    .application-item .download .app-icons a img,
+    .application-item .logo img {
+        filter: inherit;
+    }
+    .application-item .download .title {
+        color: #000 !important;
+    }
+}

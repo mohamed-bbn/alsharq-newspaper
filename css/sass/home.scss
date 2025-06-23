@@ -1,0 +1,329 @@
+@import 'helpers/mixins';
+@import 'helpers/variables';
+@import 'layout/header';
+@import 'layout/slider';
+@import 'layout/news';
+@import 'layout/error404';
+@import 'layout/footer';
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+hr,
+strong,
+b,
+input,
+select,
+textarea,
+.highcharts-title,
+.highcharts-axis-labels,
+.highcharts-yaxis-title {
+    @include reset;
+}
+
+body {}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: $ofwhite;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $blue;
+    cursor: pointer;
+}
+
+.flextex {
+    display: flex;
+    align-items: center;
+    .date {
+        font-size: 12px;
+        font-weight: 400;
+        color: $white;
+        margin-right: $com-spacing-3;
+    }
+}
+
+section {
+    @include section;
+}
+
+.tagtext {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $blue;
+    font-size: 12px;
+    font-weight: 400;
+    color: $white;
+    line-height: 19px;
+    padding: $com-spacing-1 $com-spacing-3;
+    border-radius: 2px;
+}
+
+.title {
+    @include title;
+}
+
+.bottom {
+    @include bottom;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    border: $zero;
+    margin: $zero;
+    margin-top: $com-spacing-4;
+    padding: $com-spacing-4;
+    border-radius: 4px;
+    height: 60px;
+    strong {
+        margin-left: $com-spacing-2;
+        color: #856404;
+    }
+    a {
+        text-decoration: underline;
+        color: $white;
+        font-weight: 400;
+        &:hover {
+            text-decoration: $none;
+        }
+    }
+    .text-mass {
+        margin: $zero !important;
+        margin-right: $com-spacing-3 !important;
+    }
+    p {
+        color: $white;
+        margin: $zero !important;
+    }
+    &.alert-success {
+        background: linear-gradient(303.91deg, #1F7A66 7.57%, #60B3A7 94.39%);
+    }
+    &.alert-danger {
+        background: linear-gradient(303.91deg, #C24848 7.57%, #D34A4A 94.39%);
+    }
+}
+
+.contant {
+    position: absolute;
+    left: $zero;
+    bottom: $zero;
+    width: $fullwidth;
+    padding: $com-spacing-9 $com-spacing-4 $com-spacing-4 $com-spacing-4;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    .title {
+        color: $white;
+        font-size: 24px;
+        font-weight: 500;
+    }
+}
+
+.carditem {
+    @include carditem;
+}
+
+.smallitem {
+    @include smallitem;
+}
+
+.form-control {
+    @include input
+}
+
+.dark-20,
+.dark-40,
+body,
+.dark-60,
+.dark-80,
+.dark-100 {
+    @include transition(all 0.5s ease-in-out 0s);
+}
+
+select.form-control {
+    -webkit-appearance: none;
+    background: $white url(../images/arrow.svg) no-repeat;
+    background-position: $com-spacing-3 24px;
+}
+
+.pagination {
+    width: $fullwidth;
+    margin-top: $com-spacing-7;
+    justify-content: center;
+    overflow: hidden;
+    @media (max-width: 991px) {
+        margin-top: $com-spacing-6;
+        padding-bottom: $com-spacing-3;
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+    li {
+        display: $inline;
+        margin: $zero $com-spacing-2;
+        a,
+        span {
+            @include flex;
+            text-align: center;
+            color: $blak;
+            @include border-radius(0 !important);
+            min-width: 44px;
+            height: 44px;
+            border: $zero;
+            background: #e6e6e6;
+            @include transition(all 0.5s ease-in-out 0s);
+            padding-top: 10px;
+            color: #8B8B8B;
+        }
+        svg {
+            width: 12px;
+            height: 12px;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
+        &:first-child,
+        &:last-child {
+            a {
+                color: $blue;
+                font-size: 12px;
+                padding-top: $com-spacing-2;
+                svg {
+                    max-width: 12px;
+                    height: 12px;
+                    fill: $blue;
+                }
+            }
+        }
+        &:last-child {
+            margin-left: $zero;
+            svg {
+                transform: rotate(90deg);
+                margin-right: $com-spacing-1;
+            }
+        }
+        &:first-child {
+            margin-right: $zero;
+            svg {
+                transform: rotate(-90deg);
+                margin-left: $com-spacing-1;
+            }
+        }
+    }
+    .page-link.active,
+    .page-link:hover {
+        background: $blue !important;
+        color: $white !important;
+        svg {
+            fill: $white;
+        }
+    }
+}
+
+.advertising-banner {
+    .line {
+        position: relative;
+        width: $fullwidth;
+        &::before {
+            content: '';
+            position: absolute;
+            left: $zero;
+            width: calc(100% - 84px);
+            height: 1px;
+            background: #e8e8e8;
+            top: $com-spacing-4;
+        }
+        p {
+            position: relative;
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 400;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+    img {
+        max-width: $fullwidth
+    }
+}
+
+.social {
+    @include social;
+}
+
+.popup-box {
+    @include overlay;
+    display: none;
+    background: #000000b8;
+    &.show {
+        display: block;
+    }
+    .social {
+        height: $fullwidth;
+    }
+    .close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: $com-spacing-1;
+        left: $com-spacing-3;
+        z-index: 10;
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: $white;
+        }
+    }
+}
+
+.minhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+        display: block;
+    }
+    .listlinks {
+        display: flex;
+        @media (max-width: 767px) {
+            margin-top: $com-spacing-5;
+            width: $fullwidth;
+            overflow: hidden;
+            overflow-x: scroll;
+            padding-left: $com-spacing-1;
+            &::-webkit-scrollbar {
+                height: $zero;
+            }
+        }
+        a {
+            @include flex;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1;
+            border: 1px solid #CACACA;
+            border-radius: 5px;
+            min-width: 80px;
+            height: 34px;
+            color: $blak;
+            @include transition(all 0.5s ease-in-out 0s);
+            margin-left: $com-spacing-3;
+            &:last-child {
+                margin-left: $zero;
+            }
+            &:hover {
+                background: $blue;
+                color: $white;
+                border: 1px solid $blue;
+            }
+        }
+    }
+}
