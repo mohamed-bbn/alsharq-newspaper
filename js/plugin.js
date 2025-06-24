@@ -78,9 +78,6 @@ $(window).on("load", function() {
     });
 
 
-
-
-
     $(".menu-item").click(function() {
         $(this).addClass("activelink").siblings().removeClass("activelink");
     });
@@ -117,9 +114,27 @@ $(window).on("load", function() {
 
     ////////////////// End show Header
 
-    $('#newsTicker').breakingNews({
-        direction: 'rtl'
-    });
+    const $ticker = $('.ticker-content');
+    const itemHeight = $('.ticker-item').outerHeight();
+    const speed = 4000;
+    let pause = false;
+
+    function scrollNews() {
+        if (!pause) {
+            $ticker.animate({ top: `-=${itemHeight}px` }, 800, function() {
+                $ticker
+                    .append($ticker.find('.ticker-item').first())
+                    .css('top', 0);
+            });
+        }
+    }
+    let interval = setInterval(scrollNews, speed);
+    $('.ticker-wrapper').hover(
+        function() { pause = true; },
+        function() { pause = false; }
+    );
+
+    ////////////////// End news ticker-item
 
 
     $(function() {

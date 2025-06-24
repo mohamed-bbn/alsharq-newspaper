@@ -67,7 +67,8 @@ nav.list-search a,
 .modal-header p,
 .footer .icons .flex p,
 .footer .item .navmenu a,
-.form-control {
+.form-control,
+.newsTicker .ticker-item a {
     color: #fff !important;
 }
 
@@ -75,7 +76,8 @@ a.title:hover,
 .submenu a:hover,
 nav.list-search a:hover,
 .itemscroll .listnews a:hover .title,
-.footer .item .navmenu a:hover {
+.footer .item .navmenu a:hover,
+.newsTicker .ticker-item a:hover {
     color: #0095DA !important;
 }
 

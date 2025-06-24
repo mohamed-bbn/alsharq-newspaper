@@ -203,7 +203,7 @@
 @mixin title {
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: 700;
     line-height: 150%;
     color: $blak;
@@ -214,17 +214,44 @@
         font-size: 22px;
     }
     a {
+        display: flex;
+        align-items: center;
         color: $blak;
-        font-size: 30px;
+        font-size: 26px;
         @include transition(all 0.5s ease-in-out 0s);
         @media (max-width: 999px) {
             font-size: 22px;
         }
+        &:hover {
+            color: $blue;
+            span {
+                background: #8080801A;
+                min-width: 78px;
+                i {
+                    margin-right: $zero;
+                }
+            }
+        }
+    }
+    span {
+        @include flex;
+        border-radius: 60px;
+        height: 36px;
+        margin: $zero $com-spacing-1;
+        overflow: hidden;
+        @include transition(all 0.5s ease-in-out 0s);
+        i {
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 300;
+            color: $blue;
+            margin: $zero -30px $zero $com-spacing-1;
+            @include transition(all 0.5s ease-in-out 0s);
+        }
     }
     svg {
-        width: 16px;
-        height: 16px;
-        margin-right: $com-spacing-1;
+        width: 14px;
+        height: 14px;
     }
 }
 

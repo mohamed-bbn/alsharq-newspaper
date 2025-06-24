@@ -526,7 +526,7 @@
             visibility: hidden;
             transform: translateY(1rem);
             background: $white;
-            box-shadow: 0px 4px 24px 0px #0000000D;
+            box-shadow: 0px 4px 8px 0px #00000033;
             transition: all 0.5s ease-in-out;
             overflow: hidden;
             padding: $com-spacing-3;
@@ -550,12 +550,16 @@
                 text-transform: capitalize;
                 font-size: 14px;
                 font-weight: 300;
-                margin-bottom: $com-spacing-1;
+                border-bottom: 1px solid #ECECEC;
+                padding-bottom: $com-spacing-2;
+                margin-bottom: $com-spacing-2;
                 @media only screen and (max-width: 999px) {
                     padding: $com-spacing-1 $com-spacing-3;
                 }
                 &:last-child {
                     margin: $zero;
+                    border-bottom: $zero;
+                    padding-bottom: $zero;
                 }
                 &:hover {
                     color: $blue;
@@ -635,68 +639,52 @@
     background: $white;
     padding: $zero !important;
     border-bottom: 1px solid #CACACA;
-    .bn-breaking-news {
+    .container {
         display: flex;
         align-items: center;
-        position: relative;
-        overflow: hidden;
-        @include transition(all 0.5s ease-in-out 0s);
-        .title {
-            z-index: 1;
-            color: $red;
-            font-size: 16px;
-            height: 50px;
-            padding-left: $com-spacing-4;
-            background: $white;
-            @media (max-width: 999px) {}
-            &::after {
-                content: "";
-                position: absolute;
-                left: $zero;
-                top: 15px;
-                width: 2px;
-                height: 20px;
-                background: $red;
-            }
-        }
-        .bn-news {
-            @include overlay;
-            overflow: hidden;
-            ul {
-                @include overlay;
-                display: flex;
-                align-items: center;
-                li {
-                    position: absolute;
-                    text-decoration: none;
-                    display: none;
-                    a {
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        padding: $zero $com-spacing-3;
-                        color: $blak;
-                        font-size: 16px;
-                        font-weight: 400;
-                        @include transition(all 0.5s ease-in-out 0s);
-                        @media (max-width: 999px) {
-                            font-size: 14px;
-                        }
-                        &:hover {
-                            color: $blue !important;
-                        }
-                    }
-                }
-            }
+    }
+    .title {
+        z-index: 1;
+        color: $red;
+        font-size: 16px;
+        height: 50px;
+        padding-left: $com-spacing-4;
+        margin-left: $com-spacing-4;
+        @media (max-width: 999px) {}
+        &::after {
+            content: "";
+            position: absolute;
+            left: $zero;
+            top: 15px;
+            width: 2px;
+            height: 20px;
+            background: $red;
         }
     }
-    .bn-effect-scroll .bn-news ul {
-        width: $fullwidth;
+    .ticker-wrapper {
+        overflow: hidden;
         position: relative;
-        li {
-            display: list-item;
-            float: left;
-            position: relative;
-            width: auto
+        width: calc(100% - 116px);
+        height: 50px;
+    }
+    .ticker-content {
+        position: absolute;
+        top: 0;
+        width: $fullwidth;
+    }
+    .ticker-item {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color: $blak;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                color: $blue;
+            }
         }
     }
 }

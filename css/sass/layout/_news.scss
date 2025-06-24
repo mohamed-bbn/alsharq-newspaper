@@ -316,7 +316,7 @@
                 max-width: 300px;
             }
             .inner {
-                margin-top: 40px;
+                margin-top: 31px;
                 background: #b9e5f9;
                 height: calc(100% - 68px);
                 border-radius: 10px;
@@ -1280,6 +1280,22 @@
                 min-width: 102px;
                 @media (max-width: 767px) {
                     min-width: 70px;
+                }
+            }
+        }
+        .listlinks {
+            a {
+                svg {
+                    min-width: 10px;
+                    max-width: 10px;
+                    height: 10px;
+                    margin-right: $com-spacing-2;
+                }
+                &.active,
+                &:hover {
+                    background: #C2E7FF !important;
+                    border: 1px solid #C2E7FF !important;
+                    color: $blak !important;
                 }
             }
         }
