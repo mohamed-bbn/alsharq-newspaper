@@ -439,3 +439,189 @@
 }
 
 //////////////////////// End Slider
+.news__item {
+    position: relative;
+    width: $fullwidth;
+    padding: $com-spacing-7 $zero;
+    @media (max-width: 999px) {
+        padding: $com-spacing-3 $zero;
+    }
+    .rowbox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $com-spacing-3;
+        width: $fullwidth;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            .carousel {
+                order: -1;
+            }
+        }
+    }
+    .carousel {
+        overflow: hidden;
+        &:hover {
+            .carousel-control-next {
+                right: $com-spacing-6;
+            }
+            .carousel-control-prev {
+                left: $com-spacing-6;
+            }
+        }
+        .carousel-inner {
+            height: $fullwidth;
+        }
+        .carousel-item {
+            height: $fullwidth;
+            border-radius: 5px;
+            overflow: hidden;
+            @media (max-width: 999px) {
+                height: 284px;
+            }
+            .photo {
+                display: block;
+                width: $fullwidth;
+                height: $fullwidth;
+                overflow: hidden;
+                img {
+                    width: $fullwidth;
+                    height: $fullwidth;
+                    object-fit: cover;
+                }
+            }
+        }
+        .carousel-control-next,
+        .carousel-control-prev {
+            width: $auto;
+            height: 28px;
+            top: 50%;
+            opacity: 1;
+            margin-top: -24px;
+            @include transition(all 0.5s ease-in-out 0s);
+            @media (max-width: 991px) {
+                display: $none;
+            }
+            svg {
+                width: 28px;
+                height: 28px;
+                fill: $white;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            &:hover {
+                svg {
+                    fill: $blue;
+                }
+            }
+        }
+        .carousel-control-next {
+            right: -90px;
+        }
+        .carousel-control-prev {
+            left: -90px;
+            svg {
+                @include rotate(180deg);
+            }
+        }
+    }
+    .numbered-news {
+        margin: $zero;
+        padding: $zero;
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: $fullwidth;
+            margin-bottom: $com-spacing-3;
+            &:last-child {
+                margin-bottom: $zero;
+            }
+            .photo {
+                display: block;
+                position: relative;
+                min-width: 144px;
+                max-width: 144px;
+                height: 110px;
+                overflow: hidden;
+                background: $ofwhite;
+                margin-left: $com-spacing-4;
+                @media (max-width: 1199px) {
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+                img {
+                    width: $fullwidth;
+                    height: $fullwidth;
+                    object-fit: cover;
+                }
+            }
+            .contant {
+                @media (max-width: 1199px) {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 64px $com-spacing-2 $com-spacing-2 $com-spacing-2;
+                    .tagtext {
+                        line-height: 14px;
+                        padding: $com-spacing-1 $com-spacing-2;
+                    }
+                }
+            }
+            .title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 20px;
+                font-weight: 500;
+                color: #4A4A4A;
+                @media (max-width: 1199px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 999px) {
+                    -webkit-line-clamp: 3;
+                }
+                &:hover {
+                    color: $blue;
+                }
+            }
+            .date {
+                display: block;
+                font-size: 12px;
+                font-weight: 400;
+                color: #898989;
+                margin-top: $com-spacing-2;
+            }
+        }
+    }
+}
+
+.bartitle {
+    display: flex;
+    align-items: center;
+    background: $white;
+    padding: $zero !important;
+    height: 68px;
+    border-bottom: 1px solid #CACACA;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        right: $zero;
+        top: $zero;
+        width: 250px;
+        height: $fullwidth;
+        background: url(../images/bar1.png) no-repeat center center/cover;
+        @include transition(all 0.5s ease-in-out 0s);
+    }
+    &::after {
+        right: $auto;
+        left: $zero;
+        rotate: 180deg;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+    }
+    // .title {
+    //     color: $blue;
+    // }
+}

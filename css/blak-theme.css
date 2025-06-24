@@ -68,7 +68,9 @@ nav.list-search a,
 .footer .icons .flex p,
 .footer .item .navmenu a,
 .form-control,
-.newsTicker .ticker-item a {
+.newsTicker .ticker-item a,
+.pagination li a,
+.pagination li span {
     color: #fff !important;
 }
 
@@ -85,7 +87,8 @@ nav.list-search a:hover,
 .header .site-actions .icons .searchicon svg,
 .header .site-menu .dark-mode li.wight svg,
 .header .site-menu .dark-mode li.blak svg,
-.modal-dialog .modal-content .rowinner .item .title svg path {
+.modal-dialog .modal-content .rowinner .item .title svg path,
+.pagination li svg {
     fill: #fff;
 }
 
@@ -115,7 +118,8 @@ nav.navbar.dark-40 {
     background: none !important;
 }
 
-.slider-news__item .news-slider .rowinner .itemscroll .listnews a p {
+.slider-news__item .news-slider .rowinner .itemscroll .listnews a p,
+.localnews-item .rowbox .item .subitem p {
     color: #8f8c8c;
 }
 
@@ -135,6 +139,11 @@ nav.navbar.dark-40 {
     .latest-news .rowbox .news-tabs .tab-content .numbered-news li::before {
         color: #0095DA !important;
     }
+}
+
+.bartitle::before,
+.bartitle::after {
+    opacity: 0.2;
 }
 
 @media (max-width: 999px) {

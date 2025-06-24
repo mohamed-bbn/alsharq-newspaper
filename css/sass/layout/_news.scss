@@ -1077,7 +1077,9 @@
     }
 }
 
-.economy-item {
+.economy-item,
+.sports-international,
+.sports-arabic {
     background: $ofwhite;
     .rowinner {
         display: grid;
@@ -1098,6 +1100,15 @@
             @media (max-width: 999px) {
                 width: 280px;
             }
+        }
+    }
+}
+
+.sports-arabic {
+    background: $white;
+    .rowinner {
+        .carditem {
+            background: $ofwhite;
         }
     }
 }
@@ -1366,6 +1377,122 @@
             @media (max-width: 1199px) {
                 display: none;
             }
+        }
+    }
+}
+
+.localnews-item {
+    background: $ofwhite;
+    .rowbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 270px;
+        gap: $com-spacing-4;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+        }
+        .item {
+            .subitem {
+                position: relative;
+                display: flex;
+                width: $fullwidth;
+                margin-top: $com-spacing-4;
+                @media (max-width: 999px) {
+                    align-items: center;
+                    margin-top: $com-spacing-3;
+                }
+                .photo {
+                    display: block;
+                    position: relative;
+                    min-width: 200px;
+                    max-width: 200px;
+                    height: 238px;
+                    overflow: hidden;
+                    background: $white;
+                    margin-left: $com-spacing-4;
+                    @media (min-width: 1600px) {
+                        min-width: 290px;
+                        max-width: 290px;
+                    }
+                    @media (max-width: 1199px) {
+                        min-width: 120px;
+                        max-width: 120px;
+                    }
+                    @media (max-width: 999px) {
+                        height: 110px;
+                    }
+                    img {
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        object-fit: cover;
+                    }
+                }
+                .contant {
+                    @media (max-width: 1199px) {
+                        display: flex;
+                        justify-content: flex-end;
+                        padding: 64px $com-spacing-2 $com-spacing-2 $com-spacing-2;
+                        .tagtext {
+                            line-height: 14px;
+                            padding: $com-spacing-1 $com-spacing-2;
+                        }
+                    }
+                }
+                .title {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding-bottom: 2px;
+                    color: #4A4A4A;
+                    @media (max-width: 1199px) {
+                        font-size: 14px;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+                p {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    font-size: 12px;
+                    font-weight: 400;
+                    margin-top: $com-spacing-2;
+                    @media (max-width: 999px) {
+                        display: none;
+                    }
+                }
+                .date {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: $blue;
+                    // margin-top: $com-spacing-2;
+                    svg {
+                        width: 14px;
+                        margin-left: $com-spacing-1;
+                    }
+                }
+            }
+            .bottom {
+                margin-top: $com-spacing-4;
+                border-radius: $zero;
+                width: $fullwidth;
+            }
+        }
+    }
+    .pagination {
+        width: calc(100% - 270px);
+        margin-top: -43px;
+        @media (max-width: 1199px) {
+            margin-top: $com-spacing-6;
+        }
+        @media (max-width: 999px) {
+            width: $fullwidth;
         }
     }
 }
