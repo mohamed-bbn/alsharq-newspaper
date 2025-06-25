@@ -37,69 +37,199 @@
             display: grid;
             grid-template-columns: 1fr 50%;
             gap: $com-spacing-3;
+            height: $fullwidth;
             @media (max-width: 999px) {
                 display: block;
             }
             .itemslider {
+                position: relative;
                 overflow: hidden;
-                .carousel {
-                    &:hover {
-                        .carousel-control-next {
-                            right: $com-spacing-6;
-                        }
-                        .carousel-control-prev {
-                            left: $com-spacing-6;
+                .photonew {
+                    position: relative;
+                    display: block;
+                    width: $fullwidth;
+                    height: 454px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    @media (max-width: 999px) {
+                        height: 300px;
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        // padding: 64px 16px 16px 16px;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                    }
+                    img {
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        object-fit: cover;
+                    }
+                }
+                .coverage {
+                    position: absolute;
+                    bottom: $zero;
+                    right: $com-spacing-2;
+                    width: calc(100% - 16px);
+                    @media (max-width: 999px) {
+                        position: relative;
+                        margin-top: -100px;
+                    }
+                    .linecoverage {
+                        display: inline-flex;
+                        background: linear-gradient(45deg, #0E77A8 0%, #0094D9 100%);
+                        border-radius: 20px 20px $zero $zero;
+                        padding: $com-spacing-5 $com-spacing-3;
+                        .title {
+                            color: $white;
+                            font-size: 16px;
+                            padding-right: $com-spacing-5;
+                            &::before {
+                                content: ' ';
+                                position: absolute;
+                                top: 5px;
+                                right: $zero;
+                                border: 1px solid $red;
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 50%;
+                                background: $red;
+                                box-shadow: inset 0 0 0px 3px $blue;
+                                @include transition(all 0.5s ease-in-out 0s);
+                            }
                         }
                     }
+                    .innercoverage {
+                        position: relative;
+                        width: $fullwidth;
+                        background: #F3F4F6;
+                        padding: $com-spacing-4;
+                        border-radius: 10px $zero 10px 10px;
+                        overflow: hidden;
+                        .listnews {
+                            position: relative;
+                            width: $fullwidth;
+                            padding-right: 60px;
+                            a {
+                                position: relative;
+                                display: block;
+                                padding-bottom: $com-spacing-5;
+                                &:last-child {
+                                    padding-bottom: $zero;
+                                }
+                                &::after {
+                                    content: ' ';
+                                    position: absolute;
+                                    top: $zero;
+                                    right: -16px;
+                                    width: 1px;
+                                    height: $fullwidth;
+                                    background: #6D6D6D;
+                                }
+                                &::before {
+                                    content: ' ';
+                                    position: absolute;
+                                    top: 2px;
+                                    right: -19px;
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 50%;
+                                    background: $blue;
+                                    z-index: 1;
+                                }
+                                &:hover {
+                                    .title {
+                                        color: $blue;
+                                    }
+                                }
+                                span.date {
+                                    position: absolute;
+                                    top: -7px;
+                                    right: -68px;
+                                    color: $blue;
+                                    min-width: 35px;
+                                    text-align: $left;
+                                }
+                                .tag {
+                                    display: block;
+                                    color: $blue;
+                                    font-size: 12px;
+                                    font-weight: 700;
+                                    margin-bottom: $com-spacing-2;
+                                    line-height: 1;
+                                }
+                                .title {
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    color: $blak;
+                                    font-size: 17px;
+                                    font-weight: 400;
+                                }
+                                p {
+                                    color: #6D6D6D;
+                                    margin-top: $com-spacing-1;
+                                }
+                            }
+                        }
+                    }
+                    .sv-team {
+                        @include flex;
+                        width: calc(100% + 32px);
+                        background: linear-gradient(138.15deg, #0094D9 12.61%, #0E77A8 117.95%);
+                        margin: -15px -16px $com-spacing-4+1px $zero;
+                        padding: $com-spacing-3 $com-spacing-4;
+                        .nameteam {
+                            margin: $zero $com-spacing-4;
+                            span {
+                                font-size: 16px;
+                                font-weight: 700;
+                                margin: $zero;
+                            }
+                        }
+                        .phototeam {
+                            @include flex;
+                            margin: $zero $auto;
+                            min-width: 53px;
+                            max-width: 53px;
+                            height: 68px;
+                            img {
+                                max-width: $fullwidth;
+                                max-height: $fullwidth;
+                            }
+                        }
+                        span {
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: $white;
+                            margin-top: -20px;
+                        }
+                    }
+                }
+                .football {
+                    .linecoverage {
+                        .title {
+                            &::before {
+                                border: 1px solid $white;
+                                background: $white;
+                            }
+                        }
+                    }
+                    .innercoverage {
+                        background: #EAF7FD;
+                    }
+                }
+                .carousel {
+                    @include slidercarousel;
                     .carousel-item {
                         height: 454px;
-                        border-radius: 5px;
-                        overflow: hidden;
                         @media (max-width: 999px) {
                             height: 284px;
-                        }
-                        .photo {
-                            display: block;
-                            width: $fullwidth;
-                            height: $fullwidth;
-                            overflow: hidden;
-                            img {
-                                width: $fullwidth;
-                                height: $fullwidth;
-                                object-fit: cover;
-                            }
-                        }
-                    }
-                    .carousel-control-next,
-                    .carousel-control-prev {
-                        width: $auto;
-                        height: 28px;
-                        top: 50%;
-                        opacity: 1;
-                        margin-top: -24px;
-                        @include transition(all 0.5s ease-in-out 0s);
-                        @media (max-width: 991px) {
-                            display: $none;
-                        }
-                        svg {
-                            width: 28px;
-                            height: 28px;
-                            fill: $white;
-                            @include transition(all 0.5s ease-in-out 0s);
-                        }
-                        &:hover {
-                            svg {
-                                fill: $blue;
-                            }
-                        }
-                    }
-                    .carousel-control-next {
-                        right: -90px;
-                    }
-                    .carousel-control-prev {
-                        left: -90px;
-                        svg {
-                            @include rotate(180deg);
                         }
                     }
                 }
@@ -151,6 +281,7 @@
                         border-radius: 50%;
                         background: $blue;
                         box-shadow: inset 0 0 0px 3px $white;
+                        @include transition(all 0.5s ease-in-out 0s);
                     }
                 }
                 .listnews {
@@ -267,7 +398,8 @@
                 justify-content: center;
                 font-size: 18px;
                 font-weight: 500;
-                span {
+                b {
+                    font-size: 18px;
                     font-weight: 700;
                 }
             }
@@ -339,7 +471,8 @@
                         height: calc(100% - 8px);
                         background: $blak;
                     }
-                    span {
+                    b {
+                        font-size: 26px;
                         font-weight: 700;
                     }
                 }
@@ -423,7 +556,8 @@
                     height: 2px;
                     background: $blak;
                 }
-                span {
+                b {
+                    font-size: 24px;
                     font-weight: 700;
                 }
             }
@@ -459,69 +593,7 @@
         }
     }
     .carousel {
-        overflow: hidden;
-        &:hover {
-            .carousel-control-next {
-                right: $com-spacing-6;
-            }
-            .carousel-control-prev {
-                left: $com-spacing-6;
-            }
-        }
-        .carousel-inner {
-            height: $fullwidth;
-        }
-        .carousel-item {
-            height: $fullwidth;
-            border-radius: 5px;
-            overflow: hidden;
-            @media (max-width: 999px) {
-                height: 284px;
-            }
-            .photo {
-                display: block;
-                width: $fullwidth;
-                height: $fullwidth;
-                overflow: hidden;
-                img {
-                    width: $fullwidth;
-                    height: $fullwidth;
-                    object-fit: cover;
-                }
-            }
-        }
-        .carousel-control-next,
-        .carousel-control-prev {
-            width: $auto;
-            height: 28px;
-            top: 50%;
-            opacity: 1;
-            margin-top: -24px;
-            @include transition(all 0.5s ease-in-out 0s);
-            @media (max-width: 991px) {
-                display: $none;
-            }
-            svg {
-                width: 28px;
-                height: 28px;
-                fill: $white;
-                @include transition(all 0.5s ease-in-out 0s);
-            }
-            &:hover {
-                svg {
-                    fill: $blue;
-                }
-            }
-        }
-        .carousel-control-next {
-            right: -90px;
-        }
-        .carousel-control-prev {
-            left: -90px;
-            svg {
-                @include rotate(180deg);
-            }
-        }
+        @include slidercarousel;
     }
     .numbered-news {
         margin: $zero;
@@ -572,7 +644,6 @@
                 overflow: hidden;
                 font-size: 20px;
                 font-weight: 500;
-                color: #4A4A4A;
                 @media (max-width: 1199px) {
                     font-size: 14px;
                 }
@@ -589,6 +660,76 @@
                 font-weight: 400;
                 color: #898989;
                 margin-top: $com-spacing-2;
+            }
+        }
+    }
+    .listnewsscroll {
+        direction: ltr;
+        padding-right: $com-spacing-6;
+        height: 416px;
+        overflow: hidden;
+        overflow-y: scroll;
+        @media (max-width: 999px) {
+            height: auto;
+            overflow-y: inherit;
+            padding: $zero;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #bdbcbc;
+        }
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        li {
+            direction: rtl;
+            position: relative;
+            width: $fullwidth;
+            border-bottom: 1px solid #CACACA;
+            padding-bottom: $com-spacing-4;
+            margin-bottom: $com-spacing-4;
+            &:last-child {
+                margin-bottom: $zero;
+                padding-bottom: $zero;
+                border-bottom: $zero;
+                @media (max-width: 999px) {
+                    border-bottom: 1px solid #CACACA;
+                    padding-bottom: $com-spacing-4;
+                }
+            }
+            .title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 17px;
+                font-weight: 600;
+                padding-bottom: 2px;
+                &:hover {
+                    color: $blue;
+                }
+            }
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                color: $blak;
+                margin-top: 6px;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            .date {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                font-weight: 400;
+                color: #3B3B3B;
+                @include transition(all 0.5s ease-in-out 0s);
+                // margin-top: $com-spacing-2;
+                svg {
+                    width: 14px;
+                    margin-left: $com-spacing-1;
+                    path {
+                        @include transition(all 0.5s ease-in-out 0s);
+                    }
+                }
             }
         }
     }
@@ -624,4 +765,144 @@
     // .title {
     //     color: $blue;
     // }
+}
+
+.mostviewed__item {
+    .rowbox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $com-spacing-6;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            gap: $com-spacing-3;
+        }
+    }
+    .carousel {
+        @include slidercarousel;
+        margin-top: $com-spacing-6;
+        @media (max-width: 999px) {
+            margin-top: $com-spacing-3;
+        }
+    }
+    .numbered-news {
+        margin: $zero;
+        padding: $zero;
+        margin-top: $com-spacing-6;
+        @media (max-width: 999px) {
+            margin-top: $com-spacing-3;
+        }
+        li {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: $fullwidth;
+            margin-bottom: $com-spacing-3;
+            &:last-child {
+                margin-bottom: $zero;
+            }
+            .photo {
+                display: block;
+                position: relative;
+                min-width: 144px;
+                max-width: 144px;
+                height: 110px;
+                overflow: hidden;
+                background: $ofwhite;
+                margin-left: $com-spacing-4;
+                @media (max-width: 1199px) {
+                    min-width: 120px;
+                    max-width: 120px;
+                }
+                img {
+                    width: $fullwidth;
+                    height: $fullwidth;
+                    object-fit: cover;
+                }
+            }
+            .contant {
+                @media (max-width: 1199px) {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 64px $com-spacing-2 $com-spacing-2 $com-spacing-2;
+                    .tagtext {
+                        line-height: 14px;
+                        padding: $com-spacing-1 $com-spacing-2;
+                    }
+                }
+            }
+            .title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 20px;
+                font-weight: 500;
+                @media (max-width: 1199px) {
+                    font-size: 14px;
+                }
+                @media (max-width: 999px) {
+                    -webkit-line-clamp: 3;
+                }
+                &:hover {
+                    color: $blue;
+                }
+            }
+            .date {
+                display: block;
+                font-size: 12px;
+                font-weight: 400;
+                color: #898989;
+                margin-top: $com-spacing-2;
+            }
+        }
+    }
+    .listnews {
+        margin-top: $com-spacing-6;
+        @media (max-width: 999px) {
+            margin-top: $com-spacing-3;
+        }
+        li {
+            position: relative;
+            width: $fullwidth;
+            margin-bottom: $com-spacing-4;
+            &:last-child {
+                margin-bottom: $zero;
+            }
+            .title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                font-size: 17px;
+                font-weight: 600;
+                padding-bottom: 2px;
+                &:hover {
+                    color: $blue;
+                }
+            }
+            p {
+                font-size: 12px;
+                font-weight: 400;
+                color: $blak;
+                margin-top: 6px;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            .date {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                font-weight: 400;
+                color: #3B3B3B;
+                @include transition(all 0.5s ease-in-out 0s);
+                // margin-top: $com-spacing-2;
+                svg {
+                    width: 14px;
+                    margin-left: $com-spacing-1;
+                    path {
+                        @include transition(all 0.5s ease-in-out 0s);
+                    }
+                }
+            }
+        }
+    }
 }

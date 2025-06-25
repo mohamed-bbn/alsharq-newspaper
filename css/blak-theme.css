@@ -1,3 +1,10 @@
+.header .site-menu .dark-mode li.wight,
+.banner-item,
+.sweeteners-item,
+nav.navbar.dark-40 {
+    background: none !important;
+}
+
 .dark-20,
 .dark-mode {
     background: #35424C !important;
@@ -58,7 +65,7 @@ nav.list-search a,
 .weather li,
 .changecolors p,
 .news-tabs .choosedays p,
-.news-tabs .choosedays .listdays li,
+.che-box span.label-text,
 .news-tabs .nav-tabs a,
 .numbered-news li::before,
 .listlinks a,
@@ -70,7 +77,8 @@ nav.list-search a,
 .form-control,
 .newsTicker .ticker-item a,
 .pagination li a,
-.pagination li span {
+.pagination li span,
+.application-item .download .title b {
     color: #fff !important;
 }
 
@@ -81,6 +89,11 @@ nav.list-search a:hover,
 .footer .item .navmenu a:hover,
 .newsTicker .ticker-item a:hover {
     color: #0095DA !important;
+}
+
+.news__item .listnewsscroll li .date svg path,
+.mostviewed__item .listnews li .date svg path {
+    fill: #0095DA !important;
 }
 
 .header .site-menu .menu-link svg,
@@ -100,35 +113,30 @@ nav.list-search a:hover,
     background: #fff;
 }
 
-.form-control::placeholder {
-    color: #fff !important;
-    opacity: 1;
-    /* Firefox */
-}
-
-.form-control::-ms-input-placeholder {
-    /* Edge 12 -18 */
-    color: #fff !important;
-}
-
-.header .site-menu .dark-mode li.wight,
-.banner-item,
-.sweeteners-item,
-nav.navbar.dark-40 {
-    background: none !important;
-}
-
 .slider-news__item .news-slider .rowinner .itemscroll .listnews a p,
-.localnews-item .rowbox .item .subitem p {
+.localnews-item .rowbox .item .subitem p,
+.news__item .listnewsscroll li p,
+.news__item .listnewsscroll li .date,
+.mostviewed__item .listnews li p,
+.mostviewed__item .listnews li .date {
     color: #8f8c8c;
 }
 
-.slider-news__item .news-slider .rowinner .itemscroll .circle::before {
+.slider-news__item .news-slider .rowinner .itemscroll .circle::before,
+.che-box input[type="radio"]:checked+.label-text:before {
     box-shadow: inset 0 0 0px 3px #1c2931;
 }
 
 .logo-b {
     display: none;
+}
+
+.form-control::placeholder {
+    color: #fff;
+}
+
+.form-control::-ms-input-placeholder {
+    color: #fff;
 }
 
 .logo-w {
