@@ -27,9 +27,8 @@
         display: grid;
         grid-template-columns: 1fr 300px;
         gap: $com-spacing-3;
-        width: $fullwidth;
         @media (max-width: 999px) {
-            display: block;
+            grid-template-columns: 1fr;
         }
     }
     .news-slider {
@@ -39,7 +38,7 @@
             gap: $com-spacing-3;
             height: $fullwidth;
             @media (max-width: 999px) {
-                display: block;
+                grid-template-columns: 1fr;
             }
             .itemslider {
                 position: relative;
@@ -584,7 +583,6 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: $com-spacing-3;
-        width: $fullwidth;
         @media (max-width: 999px) {
             grid-template-columns: 1fr;
             .carousel {
@@ -765,6 +763,17 @@
     // .title {
     //     color: $blue;
     // }
+    .listlink {
+        display: flex;
+        margin-right: $com-spacing-6;
+        a {
+            margin-right: $com-spacing-6;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
 }
 
 .mostviewed__item {
@@ -901,6 +910,106 @@
                     path {
                         @include transition(all 0.5s ease-in-out 0s);
                     }
+                }
+            }
+        }
+    }
+}
+
+.economy__item {
+    height: 5000px;
+    .rowbox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $com-spacing-6;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+        }
+        .item {
+            border: 1px solid #DEE2E6;
+            .minhead {
+                padding: $com-spacing-2 $com-spacing-3;
+                border-bottom: 1px solid #DEE2E6;
+            }
+            .flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .title {
+                    font-size: 20px !important;
+                }
+            }
+            .main-value {
+                padding: $com-spacing-3;
+                .title {
+                    justify-content: center;
+                    font-size: 32px;
+                }
+                p {
+                    text-align: center;
+                    color: red;
+                }
+            }
+            .days {
+                display: flex;
+                align-items: center;
+                border-top: 1px solid #DEE2E6;
+                padding: $com-spacing-3;
+                padding-bottom: $zero;
+                a {
+                    color: #A7A7A7;
+                    font-size: 10px;
+                    font-weight: 700;
+                    background: #F2F2F2;
+                    padding: $zero $com-spacing-3;
+                    border-radius: 5px;
+                    text-align: center;
+                    cursor: pointer;
+                    margin-left: $com-spacing-3;
+                    &:last-child {
+                        margin-left: $zero;
+                    }
+                    &.active {
+                        color: $white;
+                        background: #A7A7A7;
+                    }
+                }
+            }
+            .table {
+                tr {
+                    &:last-child {
+                        td {
+                            border-bottom: $zero;
+                        }
+                    }
+                }
+                th {
+                    background: $ofwhite;
+                    font-size: 14px;
+                    font-weight: 300;
+                    padding: .3rem;
+                }
+                td {
+                    font-size: 12px;
+                    font-weight: 300;
+                    line-height: 24px;
+                    padding: .3rem;
+                    vertical-align: middle;
+                }
+                b {
+                    display: flex;
+                    align-items: center;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $blak;
+                    svg {
+                        margin-right: $com-spacing-1;
+                    }
+                }
+                .red {
+                    color: red;
+                    font-size: 16px;
+                    font-weight: 300;
                 }
             }
         }

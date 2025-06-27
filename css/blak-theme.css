@@ -1,7 +1,9 @@
 .header .site-menu .dark-mode li.wight,
 .banner-item,
 .sweeteners-item,
-nav.navbar.dark-40 {
+nav.navbar.dark-40,
+.economy__item .rowbox .item .table th,
+.economy__item .rowbox .item .table td {
     background: none !important;
 }
 
@@ -78,7 +80,11 @@ nav.list-search a,
 .newsTicker .ticker-item a,
 .pagination li a,
 .pagination li span,
-.application-item .download .title b {
+.application-item .download .title b,
+.bartitle .listlink a,
+.economy__item .rowbox .item .table th,
+.economy__item .rowbox .item .table td,
+.economy__item .rowbox .item .table b {
     color: #fff !important;
 }
 
@@ -87,7 +93,8 @@ a.title:hover,
 nav.list-search a:hover,
 .itemscroll .listnews a:hover .title,
 .footer .item .navmenu a:hover,
-.newsTicker .ticker-item a:hover {
+.newsTicker .ticker-item a:hover,
+.bartitle .listlink a:hover {
     color: #0095DA !important;
 }
 
