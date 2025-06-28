@@ -579,6 +579,11 @@
     @media (max-width: 999px) {
         padding: $com-spacing-3 $zero;
     }
+    .advertising-banner {
+        @media (max-width: 999px) {
+            display: none;
+        }
+    }
     .rowbox {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -604,6 +609,10 @@
             margin-bottom: $com-spacing-3;
             &:last-child {
                 margin-bottom: $zero;
+            }
+            .advertising-banner {
+                margin: $zero $zero 75px $zero;
+                width: 300px;
             }
             .photo {
                 display: block;
@@ -737,8 +746,8 @@
     display: flex;
     align-items: center;
     background: $white;
-    padding: $zero !important;
-    height: 68px;
+    padding: 17px $zero !important;
+    // height: 68px;
     border-bottom: 1px solid #CACACA;
     &::before,
     &::after {
@@ -750,6 +759,9 @@
         height: $fullwidth;
         background: url(../images/bar1.png) no-repeat center center/cover;
         @include transition(all 0.5s ease-in-out 0s);
+        @media (max-width: 999px) {
+            display: none;
+        }
     }
     &::after {
         right: $auto;
@@ -766,11 +778,18 @@
     .listlink {
         display: flex;
         margin-right: $com-spacing-6;
+        @media (max-width: 999px) {
+            margin-right: $com-spacing-2;
+        }
         a {
             margin-right: $com-spacing-6;
             @include transition(all 0.5s ease-in-out 0s);
             &:hover {
                 color: $blue;
+            }
+            @media (max-width: 999px) {
+                margin-right: $com-spacing-2;
+                font-size: 14px;
             }
         }
     }
@@ -780,10 +799,9 @@
     .rowbox {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: $com-spacing-6;
+        gap: $com-spacing-3;
         @media (max-width: 999px) {
             grid-template-columns: 1fr;
-            gap: $com-spacing-3;
         }
     }
     .carousel {
@@ -914,14 +932,32 @@
             }
         }
     }
+    &.latesteconomic {
+        .carousel,
+        .numbered-news,
+        .item {
+            margin-top: $zero;
+            // @media (max-width: 999px) {
+            //     margin-top: $com-spacing-3;
+            // }
+        }
+        .item {
+            padding-left: 30%;
+            @media (max-width: 1199px) {
+                padding-left: $zero;
+            }
+            .listnews li .title {
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
 }
 
 .economy__item {
-    height: 5000px;
     .rowbox {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: $com-spacing-6;
+        gap: $com-spacing-3;
         @media (max-width: 999px) {
             grid-template-columns: 1fr;
         }
@@ -930,6 +966,46 @@
             .minhead {
                 padding: $com-spacing-2 $com-spacing-3;
                 border-bottom: 1px solid #DEE2E6;
+                .tabs,
+                .nav-tabs {
+                    display: flex;
+                    align-items: center;
+                    border: $zero;
+                    a {
+                        color: #A7A7A7;
+                        min-width: 80px;
+                        font-size: 10px;
+                        font-weight: 700;
+                        border: $zero;
+                        background: #F2F2F2;
+                        padding: $zero $com-spacing-2;
+                        border-radius: 5px;
+                        text-align: center;
+                        cursor: pointer;
+                        margin-left: $com-spacing-3;
+                        &:last-child {
+                            margin-left: $zero;
+                        }
+                        &.active {
+                            color: $white;
+                            background: #A7A7A7;
+                        }
+                    }
+                }
+                .more {
+                    display: flex;
+                    align-items: center;
+                    color: #A7A7A7;
+                    font-size: 10px;
+                    font-weight: 700;
+                    @include transition(all 0.5s ease-in-out 0s);
+                    &:hover {
+                        color: $blue;
+                    }
+                    svg {
+                        margin-right: $com-spacing-1;
+                    }
+                }
             }
             .flex {
                 display: flex;
@@ -988,6 +1064,7 @@
                     font-size: 14px;
                     font-weight: 300;
                     padding: .3rem;
+                    @include transition(all 0.5s ease-in-out 0s);
                 }
                 td {
                     font-size: 12px;
@@ -995,6 +1072,8 @@
                     line-height: 24px;
                     padding: .3rem;
                     vertical-align: middle;
+                    background: none;
+                    @include transition(all 0.5s ease-in-out 0s);
                 }
                 b {
                     display: flex;
@@ -1002,6 +1081,7 @@
                     font-size: 16px;
                     font-weight: 700;
                     color: $blak;
+                    @include transition(all 0.5s ease-in-out 0s);
                     svg {
                         margin-right: $com-spacing-1;
                     }
@@ -1011,6 +1091,125 @@
                     font-size: 16px;
                     font-weight: 300;
                 }
+            }
+            #chart {
+                max-width: $fullwidth;
+            }
+        }
+    }
+}
+
+.slidersport__item {
+    padding: $com-spacing-6 $zero;
+    border-bottom: 1px solid #CACACA;
+    height: 203px;
+    overflow: hidden;
+    @media (max-width: 999px) {
+        padding: $com-spacing-3 $zero;
+        height: 197px;
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        height: $fullwidth;
+        @media (max-width: 999px) {
+            display: block;
+        }
+    }
+    select.form-control {
+        position: absolute;
+        right: $com-spacing-3;
+        border: $zero !important;
+        max-width: 140px;
+        padding: $zero;
+        padding-right: 18px;
+        background-position: $fullwidth $com-spacing-5;
+        @media (max-width: 999px) {
+            position: relative;
+            right: $auto;
+            max-width: $fullwidth;
+        }
+        option {
+            font-size: 14px;
+            padding: $com-spacing-2;
+        }
+    }
+    .slidersport {
+        @include styleslider;
+        position: initial;
+        margin: 0 auto;
+        max-width: 70%;
+        padding: $com-spacing-3;
+        padding-bottom: $zero;
+        background: $ofwhite;
+        border-radius: 6px;
+        @media (max-width: 999px) {
+            max-width: $fullwidth;
+            margin: $zero;
+        }
+        .slick-track {
+            padding-bottom: $com-spacing-3;
+        }
+        .slick-dots {
+            display: none !important;
+        }
+        .slick-prev,
+        .slick-next {
+            top: 50%;
+            margin-top: -14px;
+            @media (max-width: 999px) {
+                display: none !important;
+            }
+        }
+        .slick-prev {
+            left: $com-spacing-2;
+        }
+        .slick-next {
+            left: 42px;
+        }
+    }
+    .slick-slide {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: $com-spacing-2 $com-spacing-3;
+        border-radius: 6px;
+        margin: $zero $com-spacing-1;
+        background: $white;
+        box-shadow: 0px 4px 8px 0px #00000033;
+        .text-center {
+            min-width: 56px;
+        }
+        .photo {
+            margin: $zero $auto;
+            min-width: 30px;
+            max-width: 30px;
+            height: 30px;
+            img {
+                max-width: $fullwidth;
+                max-height: $fullwidth;
+            }
+        }
+        p {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .text {
+            text-align: center;
+            span {
+                font-size: 10px;
+                font-weight: 400;
+                color: $blak;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            .resultsnumber {
+                color: $blak;
+                font-size: 28px;
+                font-weight: 700;
+                text-align: center;
+                // margin: $com-spacing-2 $zero;
+                @include transition(all 0.5s ease-in-out 0s);
             }
         }
     }

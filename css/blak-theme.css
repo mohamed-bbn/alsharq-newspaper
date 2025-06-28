@@ -2,13 +2,13 @@
 .banner-item,
 .sweeteners-item,
 nav.navbar.dark-40,
-.economy__item .rowbox .item .table th,
-.economy__item .rowbox .item .table td {
+.economy__item .rowbox .item .table th {
     background: none !important;
 }
 
 .dark-20,
-.dark-mode {
+.dark-mode,
+.news-details .container .subdetails .flex .social a {
     background: #35424C !important;
 }
 
@@ -84,7 +84,12 @@ nav.list-search a,
 .bartitle .listlink a,
 .economy__item .rowbox .item .table th,
 .economy__item .rowbox .item .table td,
-.economy__item .rowbox .item .table b {
+.economy__item .rowbox .item .table b,
+.slidersport__item .slick-slide p,
+.maplink li a,
+.maplink li,
+.news-details .container .subdetails p,
+.linetext {
     color: #fff !important;
 }
 
@@ -94,7 +99,8 @@ nav.list-search a:hover,
 .itemscroll .listnews a:hover .title,
 .footer .item .navmenu a:hover,
 .newsTicker .ticker-item a:hover,
-.bartitle .listlink a:hover {
+.bartitle .listlink a:hover,
+.maplink li a:hover {
     color: #0095DA !important;
 }
 
@@ -125,7 +131,9 @@ nav.list-search a:hover,
 .news__item .listnewsscroll li p,
 .news__item .listnewsscroll li .date,
 .mostviewed__item .listnews li p,
-.mostviewed__item .listnews li .date {
+.mostviewed__item .listnews li .date,
+.tabseconomy-item .rowbox .item .subitem p,
+.slidersport__item .slick-slide .text span {
     color: #8f8c8c;
 }
 
@@ -148,6 +156,11 @@ nav.list-search a:hover,
 
 .logo-w {
     display: block !important;
+}
+
+.slidersport__item select.form-control {
+    background: #1C242A url(../images/arrow2.svg) no-repeat;
+    background-position: 100% 20px;
 }
 
 @media (max-width: 1199px) {

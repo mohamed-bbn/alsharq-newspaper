@@ -295,30 +295,35 @@
             font-size: 22px;
         }
     }
-    .maplink {
-        @include flex;
-        margin-top: $minmargin;
-        li {
-            display: $inline;
-            color: $red;
-            margin-left: $com-spacing-2;
-            &:last-child {
-                margin-left: $zero;
+}
+
+@mixin maplink {
+    display: flex;
+    li {
+        display: $inline;
+        color: $blak;
+        font-size: 14px;
+        font-weight: 300;
+        margin-left: $com-spacing-2;
+        @include transition(all 0.5s ease-in-out 0s);
+        &:last-child {
+            margin-left: $zero;
+        }
+        a {
+            font-size: 14px;
+            font-weight: 300;
+            color: $blak;
+            position: relative;
+            padding-left: $com-spacing-3;
+            @include transition(all 0.5s ease-in-out 0s);
+            &:hover {
+                color: $blue;
             }
-            a {
-                color: $white;
-                position: relative;
-                padding-left: $minmargin;
-                @include transition(all 0.5s ease-in-out 0s);
-                &:hover {
-                    color: $red;
-                }
-                &:before {
-                    @include position(absolute, $top: 1px, $left: 2px);
-                    content: "/";
-                    display: $inline;
-                    color: $white;
-                }
+            &:before {
+                @include position(absolute, $top: -3px, $left: 2px);
+                content: "|";
+                display: $inline;
+                color: $blue;
             }
         }
     }
@@ -326,6 +331,7 @@
 
 @mixin styleslider {
     @include position(relative);
+    direction: ltr;
     .slick-list {
         @include position(relative);
         display: $block;

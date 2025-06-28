@@ -130,10 +130,13 @@
             }
             .logo {
                 max-width: 300px;
+                @media (max-width: 999px) {
+                    max-width: 220px;
+                }
             }
             @media (max-width: 999px) {
                 display: block;
-                max-width: 300px;
+                max-width: 220px;
                 margin: $zero $auto;
                 img {
                     display: block;
