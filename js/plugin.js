@@ -25,6 +25,7 @@ $(window).on("load", function() {
     }
     setActiveClass(".pagination", "li a");
     setActiveClass(".iframeitems", "a");
+    setActiveClass(".list-letters", "a");
 
     // This function is specific to each element that gets the active class
 

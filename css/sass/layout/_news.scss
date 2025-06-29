@@ -68,6 +68,7 @@
                 -webkit-line-clamp: 1;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
+                padding-bottom: 2px;
                 font-size: 20px;
                 font-weight: 500;
                 @media (max-width: 360px) {
@@ -1686,7 +1687,8 @@
     }
 }
 
-.tabseconomy-item {
+.tabseconomy-item,
+.editor-interviews {
     background: $ofwhite;
     .advertising-banner {
         margin-bottom: $com-spacing-8;
@@ -1698,8 +1700,10 @@
         display: grid;
         grid-template-columns: 1fr 300px;
         gap: $com-spacing-4;
+        align-items: flex-start;
         @media (max-width: 999px) {
             grid-template-columns: 1fr;
+            gap: $com-spacing-3;
         }
         .nav-tabs {
             margin-bottom: $com-spacing-4;
@@ -1868,6 +1872,18 @@
     .pagination {
         @media (max-width: 999px) {
             display: none;
+        }
+    }
+}
+
+.editor-interviews {
+    background: $white;
+    border-bottom: 30px solid $ofwhite;
+    overflow: inherit;
+    .rowinner {
+        &:last-child {
+            position: sticky;
+            top: 100px;
         }
     }
 }
@@ -2239,6 +2255,132 @@
                 margin-top: $com-spacing-6;
                 @media (max-width: 999px) {
                     margin-top: $com-spacing-3;
+                }
+            }
+        }
+    }
+}
+
+.infographic__item {
+    background: $white;
+    border-bottom: 30px solid $ofwhite;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 316px;
+        gap: $com-spacing-4;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            gap: $com-spacing-3;
+        }
+        .item {
+            &:last-child {
+                padding-right: $com-spacing-4;
+                border-right: 1px solid #CACACA;
+                @media (max-width: 999px) {
+                    border: $zero;
+                    padding: $zero;
+                }
+            }
+            @media (max-width: 999px) {}
+            .subitem {
+                position: relative;
+                width: $fullwidth;
+                margin-top: $com-spacing-3;
+                border: 1px solid #CACACA;
+                @media (max-width: 999px) {}
+                .photo {
+                    display: block;
+                    position: relative;
+                    width: $fullwidth;
+                    height: 238px;
+                    overflow: hidden;
+                    background: $ofwhite;
+                    img {
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+                }
+                .flextex .date {
+                    color: $blak;
+                }
+                .title {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding-bottom: 2px;
+                    @media (max-width: 1199px) {
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+            .advertising-banner {
+                margin-top: $com-spacing-3;
+                width: 300px;
+                @media (max-width: 320px) {
+                    width: $fullwidth;
+                }
+            }
+            .rowbox {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: $com-spacing-4;
+                @media (max-width: 999px) {
+                    gap: $com-spacing-3;
+                }
+                @media (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                }
+                .subitem {
+                    margin-top: $zero;
+                    // margin-bottom: $com-spacing-4;
+                    .photo {
+                        height: 454px;
+                        @media (max-width: 767px) {
+                            height: 238px;
+                        }
+                    }
+                }
+            }
+            .infodetails {
+                margin: $zero $auto;
+                max-width: 770px;
+                padding-bottom: $com-spacing-6;
+                border-bottom: 1px solid #CACACA;
+                margin-bottom: $com-spacing-6;
+                @media (max-width: 999px) {
+                    padding-bottom: $com-spacing-3;
+                    margin-bottom: $com-spacing-3;
+                }
+                &:last-child {
+                    padding-bottom: $zero;
+                    border-bottom: $zero;
+                    margin-bottom: $zero;
+                }
+                .photo {
+                    @include flex;
+                    width: $fullwidth;
+                    max-height: 1200px;
+                    margin-top: $com-spacing-6;
+                    @media (max-width: 999px) {
+                        margin-top: $com-spacing-3;
+                    }
+                    img {
+                        max-width: $fullwidth;
+                        max-height: $fullwidth;
+                    }
+                }
+                p {
+                    @include transition(all 0.5s ease-in-out 0s);
+                    margin-top: $com-spacing-3;
+                    @media (max-width: 999px) {}
                 }
             }
         }

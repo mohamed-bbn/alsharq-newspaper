@@ -22,8 +22,14 @@ body,
     background: #1c2931 !important;
 }
 
-.dark-80 {
+.dark-80,
+.item-writer .list-letters a {
     background: #2F3841 !important;
+}
+
+.item-writer .list-letters a:hover,
+.item-writer .list-letters a.active {
+    background: #0095DA !important;
 }
 
 .dark-100,
@@ -89,7 +95,9 @@ nav.list-search a,
 .maplink li a,
 .maplink li,
 .news-details .container .subdetails p,
-.linetext {
+.linetext,
+.item-writer .list-letters a,
+.opinion-writer-inner .container .item .userwriter ul li strong {
     color: #fff !important;
 }
 
@@ -114,7 +122,8 @@ nav.list-search a:hover,
 .header .site-menu .dark-mode li.wight svg,
 .header .site-menu .dark-mode li.blak svg,
 .modal-dialog .modal-content .rowinner .item .title svg path,
-.pagination li svg {
+.pagination li svg,
+.opinion-writer-inner .container .item .userwriter .social a svg {
     fill: #fff;
 }
 
@@ -133,7 +142,12 @@ nav.list-search a:hover,
 .mostviewed__item .listnews li p,
 .mostviewed__item .listnews li .date,
 .tabseconomy-item .rowbox .item .subitem p,
-.slidersport__item .slick-slide .text span {
+.slidersport__item .slick-slide .text span,
+.editor-interviews .rowbox .item .subitem p,
+.infographic__item .container .item .subitem .flextex .date,
+.infographic__item .container .item .infodetails p,
+.opinion-writer-inner .container .item .subitem p,
+.opinion-writer-inner .container .item .userwriter p {
     color: #8f8c8c;
 }
 
@@ -161,6 +175,11 @@ nav.list-search a:hover,
 .slidersport__item select.form-control {
     background: #1C242A url(../images/arrow2.svg) no-repeat;
     background-position: 100% 20px;
+}
+
+.editor-interviews,
+.infographic__item {
+    border-bottom: 0px;
 }
 
 @media (max-width: 1199px) {
