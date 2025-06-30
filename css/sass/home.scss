@@ -316,6 +316,7 @@ select.form-control {
             }
         }
         a {
+            position: relative;
             @include flex;
             font-size: 13px;
             font-weight: 400;
@@ -331,12 +332,60 @@ select.form-control {
             &:last-child {
                 margin-left: $zero;
             }
-            &:hover,
-            &.active {
+            &::before {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 4px;
+                right: 12px;
+                top: 14px;
                 background: $blue;
-                color: $white;
-                border: 1px solid $blue;
+                transform: rotate(-45deg);
+                opacity: 0;
+                @include transition(all 0.5s ease-in-out 0s);
             }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 2px;
+                height: 10px;
+                right: 7px;
+                top: 10px;
+                background: $blue;
+                transform: rotate(45deg);
+                opacity: 0;
+                @include transition(all 0.5s ease-in-out 0s);
+            }
+            &.active {
+                // background: $blue;
+                // color: $white;
+                border: 1px solid $blue;
+                &::before,
+                &::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .position-relative {
+        min-width: 265px;
+        @media (max-width: 478px) {
+            min-width: $fullwidth;
+            margin-top: $com-spacing-3;
+        }
+        .icon {
+            position: absolute;
+            right: $com-spacing-3;
+            top: 5px;
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .form-control {
+            font-size: 16px;
+            padding-right: 44px;
+            border: 1px solid #D4D4D4;
         }
     }
 }

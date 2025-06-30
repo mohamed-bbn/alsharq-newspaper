@@ -97,7 +97,8 @@ nav.list-search a,
 .news-details .container .subdetails p,
 .linetext,
 .item-writer .list-letters a,
-.opinion-writer-inner .container .item .userwriter ul li strong {
+.userwriter ul li strong,
+.dates label {
     color: #fff !important;
 }
 
@@ -108,7 +109,8 @@ nav.list-search a:hover,
 .footer .item .navmenu a:hover,
 .newsTicker .ticker-item a:hover,
 .bartitle .listlink a:hover,
-.maplink li a:hover {
+.maplink li a:hover,
+.electronic-copies .text-pdf .center .title {
     color: #0095DA !important;
 }
 
@@ -123,8 +125,12 @@ nav.list-search a:hover,
 .header .site-menu .dark-mode li.blak svg,
 .modal-dialog .modal-content .rowinner .item .title svg path,
 .pagination li svg,
-.opinion-writer-inner .container .item .userwriter .social a svg {
+.userwriter .social a svg {
     fill: #fff;
+}
+
+.position-relative .icon svg path {
+    stroke: #fff;
 }
 
 .header .site-actions .showboxsearch nav.list-search a:hover {
@@ -147,7 +153,11 @@ nav.list-search a:hover,
 .infographic__item .container .item .subitem .flextex .date,
 .infographic__item .container .item .infodetails p,
 .opinion-writer-inner .container .item .subitem p,
-.opinion-writer-inner .container .item .userwriter p {
+.userwriter p,
+.opinion-writer-article .container .item .subdetails p,
+.filternews-item .rowbox .item .subitem p,
+.newsgroup-item .rowbox .item .subitem p,
+.searchitem .item .subitem p {
     color: #8f8c8c;
 }
 
@@ -178,7 +188,9 @@ nav.list-search a:hover,
 }
 
 .editor-interviews,
-.infographic__item {
+.infographic__item,
+.newsgroup-item,
+.electronic-copies {
     border-bottom: 0px;
 }
 
