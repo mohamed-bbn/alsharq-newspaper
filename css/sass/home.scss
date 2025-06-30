@@ -325,12 +325,14 @@ select.form-control {
             min-width: 80px;
             height: 34px;
             color: $blak;
+            cursor: pointer;
             @include transition(all 0.5s ease-in-out 0s);
             margin-left: $com-spacing-3;
             &:last-child {
                 margin-left: $zero;
             }
-            &:hover {
+            &:hover,
+            &.active {
                 background: $blue;
                 color: $white;
                 border: 1px solid $blue;

@@ -5531,6 +5531,7 @@ select.form-control {
       min-width: 80px;
       height: 34px;
       color: #000;
+      cursor: pointer;
       -moz-transition: all 0.5s ease-in-out 0s;
       -o-transition: all 0.5s ease-in-out 0s;
       -webkit-transition: all 0.5s ease-in-out 0s;
@@ -5538,7 +5539,7 @@ select.form-control {
       margin-left: 12px; }
       .minhead .listlinks a:last-child {
         margin-left: 0px; }
-      .minhead .listlinks a:hover {
+      .minhead .listlinks a:hover, .minhead .listlinks a.active {
         background: #0095DA;
         color: #fff;
         border: 1px solid #0095DA; }
