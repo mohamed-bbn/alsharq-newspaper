@@ -2608,3 +2608,441 @@
         }
     }
 }
+
+.photosalbum {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: $com-spacing-8;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            gap: $com-spacing-3;
+        }
+    }
+    .item {
+        .carousel {
+            @include slidercarousel;
+            margin-top: $com-spacing-6;
+            @media (max-width: 999px) {
+                margin-top: $com-spacing-3;
+            }
+            .carousel-item {
+                height: 545px;
+                @media (max-width: 999px) {
+                    height: 300px;
+                }
+                .photo {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 0px;
+                        bottom: 0px;
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        // padding: 64px 16px 16px 16px;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                    }
+                }
+            }
+        }
+    }
+    .rowinner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $com-spacing-6;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            gap: $com-spacing-3;
+        }
+    }
+    .subitem {
+        margin-top: $com-spacing-6;
+        @media (max-width: 999px) {
+            margin-top: $com-spacing-3;
+        }
+        .photo {
+            position: relative;
+            display: block;
+            width: $fullwidth;
+            height: 200px;
+            overflow: hidden;
+            @media (max-width: 999px) {}
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: $fullwidth;
+                height: $fullwidth;
+                // padding: 64px 16px 16px 16px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            }
+            img {
+                width: $fullwidth;
+                height: $fullwidth;
+                object-fit: cover;
+            }
+        }
+        .icon {
+            position: absolute;
+            right: $com-spacing-3;
+            top: $com-spacing-3;
+            z-index: 1;
+            svg {
+                width: 18px;
+                height: 20px;
+            }
+        }
+        .title {
+            margin-top: $com-spacing-3;
+            font-size: 16px;
+            font-weight: 400;
+            &:hover {
+                color: $blue;
+            }
+        }
+    }
+}
+
+.latest-albums-item {
+    .rowbox {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: $com-spacing-3;
+        margin-top: $com-spacing-3;
+        @media (max-width: 1199px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width:999px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width:500px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    .subitem {
+        @media (max-width: 999px) {}
+        .photo {
+            position: relative;
+            display: block;
+            width: $fullwidth;
+            height: 222px;
+            overflow: hidden;
+            @media (max-width: 999px) {}
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0px;
+                bottom: 0px;
+                width: $fullwidth;
+                height: $fullwidth;
+                // padding: 64px 16px 16px 16px;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+            }
+            img {
+                width: $fullwidth;
+                height: $fullwidth;
+                object-fit: cover;
+            }
+        }
+        .title {
+            margin-top: $com-spacing-3;
+            font-size: 18px;
+            font-weight: 400;
+            justify-content: center;
+            &:hover {
+                color: $blue;
+            }
+        }
+        .date {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: $com-spacing-1;
+        }
+    }
+}
+
+.viewed-albums-item {
+    background: #2F3841;
+    .title {
+        a {
+            color: $white;
+        }
+    }
+    .galleryalbums {
+        display: flex;
+        gap: $com-spacing-3;
+        @include transition(all 0.5s ease-in-out 0s);
+        width: $fullwidth;
+    }
+    .gallery-item {
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+        height: 354px;
+        cursor: pointer;
+        margin-top: $com-spacing-6;
+        @include transition(all 0.5s ease-in-out 0s);
+        @media (max-width: 999px) {
+            margin-top: $com-spacing-3;
+            height: 254px;
+        }
+        .icon {
+            position: absolute;
+            right: $com-spacing-3;
+            top: $com-spacing-3;
+            z-index: 1;
+            svg {
+                width: 18px;
+                height: 20px;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            width: $fullwidth;
+            height: $fullwidth;
+            // padding: 64px 16px 16px 16px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+        }
+        img {
+            width: $fullwidth;
+            height: $fullwidth;
+            object-fit: cover;
+        }
+        &:hover,
+        &.active {
+            flex: 2;
+        }
+    }
+    // .gallery-item.active img {
+    //     transform: scale(1.05);
+    // }
+}
+
+.videosdetails {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: $com-spacing-3;
+        @media (max-width: 1199px) {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+            gap: $com-spacing-3;
+        }
+    }
+    .rowbox {
+        display: grid;
+        grid-template-columns: 1fr 274px 144px;
+        gap: $com-spacing-3;
+        @media (max-width: 999px) {
+            grid-template-columns: 1fr;
+        }
+        .iframe {
+            position: relative;
+            width: $fullwidth;
+            iframe,
+            img {
+                display: block;
+                border: $zero;
+                width: $fullwidth;
+                height: 520px;
+                object-fit: cover;
+                @media (max-width: 999px) {
+                    height: 300px;
+                }
+            }
+        }
+        .title {
+            font-weight: 600;
+            margin-top: $com-spacing-3;
+        }
+        .item {
+            .subitem {
+                display: block;
+                .photo {
+                    position: relative;
+                    width: $fullwidth;
+                    height: 213px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        inset: $zero;
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                    }
+                    img {
+                        width: $fullwidth;
+                        height: $fullwidth;
+                        object-fit: cover;
+                    }
+                    .iconplay {
+                        @include flex;
+                        position: absolute;
+                        right: $com-spacing-3;
+                        bottom: $com-spacing-3;
+                        border-radius: 50%;
+                        width: 28px;
+                        height: 28px;
+                        background: $blue;
+                        z-index: 1;
+                        svg {
+                            width: 12px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                @media (max-width: 999px) {
+                    display: grid;
+                    gap: $com-spacing-3;
+                    grid-template-columns: 1fr 1fr;
+                    margin-top: $com-spacing-3;
+                }
+                @media (max-width:500px) {
+                    grid-template-columns: 1fr;
+                }
+                .subitem {
+                    margin-bottom: $com-spacing-6;
+                    &:last-child {
+                        margin-bottom: $zero;
+                    }
+                    .title {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 3;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                margin-bottom: $com-spacing-3;
+                @media (max-width: 999px) {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+                @media (max-width:500px) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                &:last-child {
+                    margin-bottom: $zero;
+                }
+                .subitem {
+                    .photo {
+                        height: 110px;
+                    }
+                }
+            }
+        }
+    }
+    .advertising-banner {
+        margin-top: -15px;
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+}
+
+.latest-videos-item {
+    .rowbox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: $com-spacing-3;
+        margin-top: $com-spacing-3;
+        @media (max-width: 999px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+        .subitem {
+            display: block;
+            .photo {
+                position: relative;
+                width: $fullwidth;
+                height: 213px;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: $zero;
+                    width: $fullwidth;
+                    height: $fullwidth;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                }
+                img {
+                    width: $fullwidth;
+                    height: $fullwidth;
+                    object-fit: cover;
+                }
+                .iconplay {
+                    @include flex;
+                    position: absolute;
+                    right: $com-spacing-3;
+                    bottom: $com-spacing-3;
+                    border-radius: 50%;
+                    width: 28px;
+                    height: 28px;
+                    background: $blue;
+                    z-index: 1;
+                    svg {
+                        width: 12px;
+                        height: 10px;
+                    }
+                }
+            }
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                margin-top: $com-spacing-3;
+            }
+        }
+    }
+    &.additem {
+        .rowbox {
+            grid-template-columns: repeat(6, 1fr);
+            @media (max-width: 999px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width:500px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .subitem {
+                .photo {
+                    height: 354px;
+                    @media (max-width: 999px) {
+                        height: 213px;
+                    }
+                    .iconplay {
+                        right: 50%;
+                        bottom: 50%;
+                        margin: $zero -14px -14px $zero;
+                    }
+                }
+            }
+        }
+    }
+    &.addfor {
+        .rowbox {
+            grid-template-columns: repeat(4, 1fr);
+            @media (max-width: 1199px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media (max-width: 767px) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
