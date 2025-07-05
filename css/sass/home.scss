@@ -61,6 +61,11 @@ body {}
     @include check-box;
 }
 
+textarea.form-control {
+    height: 250px;
+    resize: none;
+}
+
 section {
     @include section;
 }
@@ -332,37 +337,56 @@ select.form-control {
             &:last-child {
                 margin-left: $zero;
             }
-            &::before {
-                content: "";
-                position: absolute;
-                width: 2px;
-                height: 4px;
-                right: 12px;
-                top: 14px;
-                background: $blue;
-                transform: rotate(-45deg);
-                opacity: 0;
+            svg {
+                min-width: 10px;
+                max-width: 10px;
+                margin-left: $com-spacing-1;
+                fill: $blue;
+                display: none;
                 @include transition(all 0.5s ease-in-out 0s);
             }
-            &::after {
-                content: "";
-                position: absolute;
-                width: 2px;
-                height: 10px;
-                right: 7px;
-                top: 10px;
+            // &::before {
+            //     content: "";
+            //     position: absolute;
+            //     width: 2px;
+            //     height: 4px;
+            //     right: 12px;
+            //     top: 14px;
+            //     background: $blue;
+            //     transform: rotate(-45deg);
+            //     opacity: 0;
+            //     @include transition(all 0.5s ease-in-out 0s);
+            // }
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     width: 2px;
+            //     height: 10px;
+            //     right: 7px;
+            //     top: 10px;
+            //     background: $blue;
+            //     transform: rotate(45deg);
+            //     opacity: 0;
+            //     @include transition(all 0.5s ease-in-out 0s);
+            // }
+            &:hover {
+                border: 1px solid $blue;
                 background: $blue;
-                transform: rotate(45deg);
-                opacity: 0;
-                @include transition(all 0.5s ease-in-out 0s);
+                color: $white;
+                svg {
+                    fill: $white;
+                }
             }
             &.active {
                 // background: $blue;
                 // color: $white;
                 border: 1px solid $blue;
-                &::before,
-                &::after {
-                    opacity: 1;
+                // &::before,
+                // &::after {
+                //     opacity: 1;
+                // }
+                svg {
+                    display: block;
                 }
             }
         }

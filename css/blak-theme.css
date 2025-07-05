@@ -158,7 +158,13 @@ nav.list-search a:hover,
 .filternews-item .rowbox .item .subitem p,
 .newsgroup-item .rowbox .item .subitem p,
 .searchitem .item .subitem p,
-.latest-albums-item .subitem .date {
+.latest-albums-item .subitem .date,
+.editorial-board-item .item .subinner a,
+.editorial-board-item .item .subinner p,
+.terms-item .item .subinner a,
+.terms-item .item .subinner p,
+.privacy-item .item .subinner a,
+.privacy-item .item .subinner p {
     color: #8f8c8c;
 }
 
