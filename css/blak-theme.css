@@ -110,7 +110,8 @@ nav.list-search a:hover,
 .newsTicker .ticker-item a:hover,
 .bartitle .listlink a:hover,
 .maplink li a:hover,
-.electronic-copies .text-pdf .center .title {
+.electronic-copies .text-pdf .center .title,
+.news-details .container .subdetails .alllivenews .newsliveitem .circle b {
     color: #0095DA !important;
 }
 
@@ -169,7 +170,8 @@ nav.list-search a:hover,
 }
 
 .slider-news__item .news-slider .rowinner .itemscroll .circle::before,
-.che-box input[type="radio"]:checked+.label-text:before {
+.che-box input[type="radio"]:checked+.label-text:before,
+.news-details .container .subdetails .circle::before {
     box-shadow: inset 0 0 0px 3px #1c2931;
 }
 

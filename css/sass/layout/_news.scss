@@ -1926,11 +1926,95 @@
                 padding-bottom: $zero;
                 border: $zero;
             }
+            .circle {
+                font-weight: 600;
+                padding-right: $com-spacing-5;
+                margin-bottom: $com-spacing-7;
+                line-height: 1;
+                &::before {
+                    content: ' ';
+                    position: absolute;
+                    top: 5px;
+                    right: $zero;
+                    border: 1px solid $red;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background: $red;
+                    box-shadow: inset 0 0 0px 3px $white;
+                    @include transition(all 0.5s ease-in-out 0s);
+                }
+            }
             p {
                 margin-top: $com-spacing-3;
                 @include transition(all 0.5s ease-in-out 0s);
             }
+            .alllivenews {
+                .newsliveitem {
+                    position: relative;
+                    margin-top: $com-spacing-9;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 31px;
+                        top: -64px;
+                        width: 1px;
+                        height: $fullwidth;
+                        background: #6D6D6D;
+                    }
+                    &:first-child {
+                        &::before {
+                            height: 16px;
+                            top: 20px;
+                        }
+                    }
+                    .circle {
+                        font-size: 13px;
+                        font-weight: 300;
+                        color: #6D6D6D;
+                        margin: $zero $com-spacing-6 $com-spacing-2 $zero;
+                        &::before {
+                            border: 1px solid $blue;
+                            background: $blue;
+                        }
+                        b {
+                            margin-left: $com-spacing-2;
+                        }
+                    }
+                    .innerlivenews {
+                        .sublive {
+                            position: relative;
+                            background: $white;
+                            border: 1px solid #6D6D6D;
+                            border-radius: 10px;
+                            padding: $com-spacing-5;
+                            .title {
+                                color: $blue;
+                            }
+                        }
+                    }
+                    .photonews {
+                        height: 454px;
+                        border-radius: 5px;
+                        margin-top: $com-spacing-6;
+                        @media (max-width: 999px) {
+                            height: 300px;
+                            margin-top: $com-spacing-3;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            left: $zero;
+                            bottom: $zero;
+                            width: $fullwidth;
+                            height: $fullwidth;
+                            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+                        }
+                    }
+                }
+            }
             .photonews {
+                position: relative;
                 width: $fullwidth;
                 height: 585px;
                 overflow: hidden;
