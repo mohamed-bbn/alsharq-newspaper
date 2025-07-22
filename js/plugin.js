@@ -311,7 +311,14 @@ $(window).on("load", function() {
         container: container,
         todayHighlight: true,
         autoclose: true,
-    })
+    });
+
+
+    $('.zoombox').click(function() {
+        $('.item-albuminner .container-fluid').toggleClass("active");
+    });
+
+
 
 
 

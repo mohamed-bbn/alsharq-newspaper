@@ -126,8 +126,10 @@ nav.list-search a:hover,
 .header .site-menu .dark-mode li.blak svg,
 .modal-dialog .modal-content .rowinner .item .title svg path,
 .pagination li svg,
-.userwriter .social a svg {
-    fill: #fff;
+.userwriter .social a svg,
+.item-albuminner .sidebar .social a svg,
+.item-albuminner .zoombox svg {
+    fill: #fff !important;
 }
 
 .position-relative .icon svg path {
@@ -165,7 +167,8 @@ nav.list-search a:hover,
 .terms-item .item .subinner a,
 .terms-item .item .subinner p,
 .privacy-item .item .subinner a,
-.privacy-item .item .subinner p {
+.privacy-item .item .subinner p,
+.item-albuminner .sidebar .text .date {
     color: #8f8c8c;
 }
 
