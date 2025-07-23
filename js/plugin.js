@@ -343,7 +343,7 @@ function initSlider(sliderID, carouselID) {
     $('#' + sliderID).flexslider({
         animation: "slide",
         controlNav: false,
-        animationLoop: true,
+        animationLoop: false,
         slideshow: true,
         slideshowSpeed: 3000,
         sync: '#' + carouselID

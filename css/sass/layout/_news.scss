@@ -603,7 +603,7 @@
                     width: $fullwidth;
                     margin-top: $com-spacing-3;
                 }
-                a {
+                li {
                     @include flex;
                     cursor: pointer;
                     height: 48px;
@@ -619,11 +619,27 @@
                     &:last-child {
                         border-left: 1px solid #3E3E4A;
                     }
+                    a {
+                        @include flex;
+                        border-radius: 60px;
+                        height: 32px;
+                        background: #8080801A;
+                        width: $zero;
+                        overflow: hidden;
+                        @include transition(all 0.5s ease-in-out 0s);
+                        svg {
+                            margin-right: $com-spacing-1;
+                        }
+                    }
                     &.active {
                         background: $white;
                         color: #000033;
                         width: $fullwidth;
                         @media (max-width: 1199px) {}
+                        &:hover a {
+                            width: 78px;
+                            margin-right: $com-spacing-2;
+                        }
                     }
                 }
             }
