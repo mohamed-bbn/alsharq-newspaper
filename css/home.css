@@ -6849,7 +6849,8 @@
         display: block;
         margin-top: 32px; }
         .footer .copyright p {
-          justify-content: center; }
+          justify-content: center;
+          text-align: center; }
         .footer .copyright a {
           justify-content: center;
           margin-top: 16px; } }
@@ -6882,7 +6883,7 @@ textarea,
 .highcharts-axis-labels,
 .highcharts-yaxis-title {
   direction: rtl;
-  text-align: right;
+  text-align: start;
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -7401,7 +7402,8 @@ select.form-control {
     .minhead {
       flex-wrap: wrap; } }
   .minhead .listlinks {
-    display: flex; }
+    display: flex;
+    gap: 12px; }
     @media (max-width: 767px) {
       .minhead .listlinks {
         margin-top: 12px;
@@ -7428,10 +7430,7 @@ select.form-control {
       -moz-transition: all 0.5s ease-in-out 0s;
       -o-transition: all 0.5s ease-in-out 0s;
       -webkit-transition: all 0.5s ease-in-out 0s;
-      transition: all 0.5s ease-in-out 0s;
-      margin-left: 12px; }
-      .minhead .listlinks a:last-child {
-        margin-left: 0px; }
+      transition: all 0.5s ease-in-out 0s; }
       .minhead .listlinks a svg {
         min-width: 10px;
         max-width: 10px;
