@@ -1460,3 +1460,10 @@ body {}
     left: auto;
     right: 30px;
 }
+
+.latest-news .rowbox .news-tabs .tab-content .numbered-news li::before {
+    margin: 0px 16px 0px -16px;
+    @media (max-width: 1199px) {
+        margin: 0;
+    }
+}
