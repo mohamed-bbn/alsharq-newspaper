@@ -16,6 +16,29 @@ $(window).on("load", function() {
     //////////////////Search
 
 
+    $(function() {
+        const $languageBox = $(".showboxlanguage");
+
+        function toggleBox($box) {
+            $box.stop(true, true).slideToggle("fast");
+        }
+        $(".language").on("click", function(event) {
+            event.stopPropagation();
+            toggleBox($languageBox);
+        });
+
+        $(".showboxlanguage").on("click", function(event) {
+            event.stopPropagation();
+        });
+
+        $(document).on("click", function() {
+            $languageBox.slideUp("fast");
+        });
+    });
+
+
+
+
     function setActiveClass(parentSelector, childSelector) {
         $(parentSelector).on("click", childSelector, function() {
             if (!$(this).hasClass("active")) {

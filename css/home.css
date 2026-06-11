@@ -10,6 +10,59 @@
     display: flex;
     align-items: center;
     justify-content: space-between; }
+  .header .language {
+    position: relative;
+    display: flex;
+    align-items: center; }
+    .header .language p {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer; }
+      .header .language p svg {
+        min-width: 14px;
+        max-width: 14px;
+        height: 14px; }
+      .header .language p .flextext {
+        display: flex;
+        align-items: center;
+        gap: 4px; }
+    .header .language .showboxlanguage {
+      display: none;
+      position: absolute;
+      top: 30px;
+      left: 0px;
+      width: 140px;
+      background: #fff;
+      padding: 12px;
+      -webkit-box-shadow: 2px 2px 20px #00000017;
+      -moz-box-shadow: 2px 2px 20px #00000017;
+      -o-box-shadow: 2px 2px 20px #00000017;
+      -ms-box-shadow: 2px 2px 20px #00000017;
+      box-shadow: 2px 2px 20px #00000017; }
+      .header .language .showboxlanguage a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        -moz-transition: all 0.5s ease-in-out 0s;
+        -o-transition: all 0.5s ease-in-out 0s;
+        -webkit-transition: all 0.5s ease-in-out 0s;
+        transition: all 0.5s ease-in-out 0s;
+        color: #000;
+        font-size: 15px;
+        font-weight: 300;
+        margin-bottom: 4px; }
+        .header .language .showboxlanguage a:last-child {
+          margin: 0px; }
+        .header .language .showboxlanguage a svg {
+          width: 12px;
+          height: 12px;
+          fill: #0095DA;
+          opacity: 0; }
+        .header .language .showboxlanguage a:hover, .header .language .showboxlanguage a.active {
+          color: #0095DA; }
+        .header .language .showboxlanguage a.active svg {
+          opacity: 1; }
   .header .burger {
     position: relative;
     display: none;
@@ -139,26 +192,30 @@
           max-width: 256px; } }
     .header .site-actions .advertising-banner {
       overflow: hidden; }
-      @media (max-width: 1010px) {
+      @media (max-width: 1100px) {
         .header .site-actions .advertising-banner {
           display: none; } }
       .header .site-actions .advertising-banner img {
         max-width: 927px;
         max-height: 90px; }
     .header .site-actions .icons {
-      position: relative; }
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 24px; }
+      @media (max-width: 1100px) {
+        .header .site-actions .icons {
+          gap: 12px; } }
       .header .site-actions .icons .searchicon {
         position: relative;
         display: flex;
         align-items: center;
         color: #000;
-        font-size: 24px;
-        font-weight: 400;
         cursor: pointer; }
         .header .site-actions .icons .searchicon svg,
         .header .site-actions .icons .searchicon img {
-          max-height: 20px;
-          width: 20px;
+          max-height: 18px;
+          width: 18px;
           fill: #000;
           -moz-transition: all 0.5s ease-in-out 0s;
           -o-transition: all 0.5s ease-in-out 0s;
@@ -166,7 +223,7 @@
           transition: all 0.5s ease-in-out 0s; }
         .header .site-actions .icons .searchicon span {
           display: block;
-          margin-right: 8px;
+          margin-right: 4px;
           -moz-transition: all 0.5s ease-in-out 0s;
           -o-transition: all 0.5s ease-in-out 0s;
           -webkit-transition: all 0.5s ease-in-out 0s;

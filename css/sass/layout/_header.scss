@@ -11,6 +11,70 @@
         align-items: center;
         justify-content: space-between;
     }
+    .language {
+        position: relative;
+        display: flex;
+        align-items: center;
+        p {
+            display: flex;
+            align-items: center;
+            gap: $com-spacing-1;
+            cursor: pointer;
+            svg {
+                min-width: 14px;
+                max-width: 14px;
+                height: 14px;
+            }
+            @media (max-width: 1199px) {}
+            .flextext {
+                display: flex;
+                align-items: center;
+                gap: $com-spacing-1;
+            }
+        }
+        .showboxlanguage {
+            display: $none;
+            position: absolute;
+            top: 30px;
+            left: $zero;
+            width: 140px;
+            background: $white;
+            padding: $com-spacing-3;
+            @include prefixer (box-shadow, 2px 2px 20px #00000017, webkit moz o ms);
+            // z-index: 1000;
+            @media (max-width: 999px) {
+                // top: 55px;
+            }
+            a {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                @include transition(all 0.5s ease-in-out 0s);
+                color: $blak;
+                font-size: 15px;
+                font-weight: 300;
+                margin-bottom: $com-spacing-1;
+                &:last-child {
+                    margin: $zero;
+                }
+                svg {
+                    width: 12px;
+                    height: 12px;
+                    fill: $blue;
+                    opacity: 0;
+                }
+                &:hover,
+                &.active {
+                    color: $blue;
+                }
+                &.active {
+                    svg {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
     .burger {
         position: relative;
         display: none;
@@ -159,7 +223,7 @@
         }
         .advertising-banner {
             overflow: hidden;
-            @media (max-width: 1010px) {
+            @media (max-width: 1100px) {
                 display: $none;
             }
             img {
@@ -169,24 +233,29 @@
         }
         .icons {
             position: relative;
+            display: flex;
+            align-items: center;
+            gap: $com-spacing-6;
+            @media (max-width: 1100px) {
+                gap: $com-spacing-3;
+            }
             .searchicon {
                 position: relative;
                 display: flex;
                 align-items: center;
                 color: $blak;
-                font-size: 24px;
-                font-weight: 400;
+                // font-size: 24px;
                 cursor: pointer;
                 svg,
                 img {
-                    max-height: 20px;
-                    width: 20px;
+                    max-height: 18px;
+                    width: 18px;
                     fill: $blak;
                     @include transition(all 0.5s ease-in-out 0s);
                 }
                 span {
                     display: block;
-                    margin-right: $com-spacing-2;
+                    margin-right: $com-spacing-1;
                     @include transition(all 0.5s ease-in-out 0s);
                     @media (max-width: 999px) {
                         display: $none;
