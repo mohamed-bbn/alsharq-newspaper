@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
     <link rel="stylesheet" type="text/css" href="../css/default-theme.css">
     <link rel="stylesheet" href="../css/home-ltr.css">
+    <link rel="stylesheet" href="../css/newstyle-ltr.css">
     <link rel="icon" href="../images/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Readex+Pro:wght@160..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap" rel="stylesheet">
@@ -171,12 +172,12 @@
         <!-- ENd site-actions -->
         <div class="site-menu dark-40">
             <div class="container">
-                <div class="tools-date">
+                <!-- <div class="tools-date">
                     <p class="date">Monday, May 12, 2025 - 15 Dhu al-Qi'dah 1446 AH</p>
                     <div class="logo">
                         <a href="index.html" title="Al-sharq"> <img loading="lazy" src="../images/logo.svg" alt="Al-sharq" title="Al-sharq"></a>
                     </div>
-                    <!-- End logo -->
+                     
                     <ul class="dark-mode">
                         <li class="blak dark-40" data-value="../css/blak-theme.css">
                             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512">
@@ -189,7 +190,7 @@
                             </svg>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <!-- ENd tools-date -->
                 <span class="overlay"></span>
                 <nav class="navbar dark-40" id="navbar">
@@ -204,46 +205,67 @@
                     </span>
                     <ul class="menu" id="menu">
                         <li class="menu-item activelink">
-                            <a class="menu-link" href="index.html" title="">Home</a>
+                            <a class="menu-link" href="index.html" title="">
+                                <img loading="lazy" src="../images/home.svg" alt="الشرق" title="الشرق">
+                            </a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="sweeteners.html" title="">Sweeteners</a>
+                            <a class="menu-link" href="sweeteners.html" title="">Local</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="economy.html" title="">economy</a>
+                            <a class="menu-link" href="economy.html" title="">Economics</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="arab-international.html" title="">News</a>
+                            <a class="menu-link" href="economy.html" title="">Arabic & international</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="sports.html" title="">sports</a>
+                            <a class="menu-link" href="sports.html" title="">Sport</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="reports-interviews.html" title="">Reports</a>
+                            <a class="menu-link" href="culture.html" title="">Culture</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link" href="opinion-writer.html" title="">Writers </a>
+                            <a class="menu-link" href="reports-interviews.html" title="">Reports & discussions</a>
                         </li>
                         <li class="menu-item">
                             <a class="menu-link" href="news.html" title="">  Miscellaneous</a>
                         </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="videos.html" title="">Videos</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-link" href="albums.html" title="">Albums</a>
+                        </li>
+
+                        <li class="menu-item">
+                            <a class="menu-link" href="albums.html" title="">Albums</a>
+                        </li>
+
+                        <li class="menu-item">
+                            <a class="menu-link" href="opinion-writer.html" title="">Opinions of the authors </a>
+                        </li>
+
+
+                        <li class="menu-item">
+                            <a class="menu-link" href="opinion-writer.html" title="">Readers Forum </a>
+                        </li>
+
                         <li class="menu-item menu-dropdown">
                             <a class="menu-link" data-toggle="submenu" title="">
                                More
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" color="var(--token-4e9ee025-4d41-457f-b60b-4d48970c270e, rgb(128, 133, 143))" ><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path></svg>
                         </a>
                             <div class="submenu dark-20">
-                                <a href="videos.html"> Videos</a>
-                                <a href="albums.html">Albums</a>
-                                <a href="news.html">culture</a>
-                                <a href="readers-corner.html">   Readers Forum</a>
-                                <a href="news.html">Tourism & travel</a>
-                                <a href="cars.html"> Cars</a>
-                                <a href="news.html"> Women, beauty & fashion</a>
-                                <a href="news.html"> Accidents & crimes</a>
-                                <a href="news.html">Global journalism</a>
-                                <a href="news.html"> technology</a>
+                                <a aria-label="AlSharq" href="/en/category/سيارات">  Cars</a>
+                                <a aria-label="AlSharq" href="/en/category/سياحة-وسفر"> Tourism and travel</a>
+                                <a aria-label="AlSharq" href="/en/category/مرأة-وتجميل-وأزياء">  Woman, beauty, and fashion</a>
+                                <a aria-label="AlSharq" href="/en/category/حوادث-وجرائم"> Incidents and crimes</a>
+                                <a aria-label="AlSharq" href="/en/category/صحافة-عالمية">  Global journalism</a>
+                                <a aria-label="AlSharq" href="/en/category/تكنولوجيا"> Technology</a>
+                                <a aria-label="AlSharq" href="/en/قطر-2022"> Qatar 2022</a>
+                                <a aria-label="AlSharq" href="/en/expo"> Expo 2023</a>
                             </div>
+
                         </li>
                     </ul>
 
@@ -265,7 +287,7 @@
 
                 </nav>
                 <!-- ENd navbar -->
-                <ul class="weather">
+                <!-- <ul class="weather">
                     <li>
                         Doha
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none"> <path d="M13.3251 6.16437H12.3254V9.16452H13.3251V6.16437Z" fill="#F4C606"/> <path d="M4.32568 14.1641V15.1638H7.32584V14.1641H4.32568Z" fill="#F4C606"/> <path d="M7.52183 8.65435L6.81494 9.36124L8.58293 11.1292L9.28982 10.4223L7.52183 8.65435Z" fill="#F4C606"/> <path d="M6.8146 19.9674L7.52148 20.6743L9.28947 18.9063L8.58259 18.1994L6.8146 19.9674Z" fill="#F4C606"/> <path d="M16.3612 10.4215L17.0681 11.1284L18.8361 9.36038L18.1292 8.6535L16.3612 10.4215Z" fill="#F4C606"/> <path d="M13.9804 16.9903C13.9804 16.9498 13.9738 16.9094 13.9738 16.8689C13.9739 16.1035 14.2507 15.364 14.7533 14.7867C15.2558 14.2093 15.9501 13.8332 16.7082 13.7276C16.5384 13.0223 16.18 12.3764 15.6713 11.8591C15.1626 11.3418 14.5227 10.9726 13.8203 10.791C13.1179 10.6095 12.3793 10.6224 11.6836 10.8285C10.988 11.0345 10.3614 11.4258 9.87114 11.9606C9.38085 12.4954 9.04524 13.1535 8.90026 13.8643C8.75527 14.5752 8.80638 15.3122 9.04809 15.9962C9.28981 16.6803 9.71303 17.2858 10.2724 17.7477C10.8319 18.2097 11.5064 18.5109 12.2238 18.6189C12.3251 18.2053 12.5455 17.8306 12.8578 17.5411C13.17 17.2516 13.5604 17.0601 13.9804 16.9903Z" fill="#F4C606"/> <g opacity="0.3"> <path d="M23.9399 19.1177C23.9396 18.3967 23.653 17.7054 23.1431 17.1957C22.6332 16.686 21.9418 16.3997 21.2208 16.3997C21.1672 16.3997 21.1114 16.4052 21.0622 16.4073C20.8257 15.6929 20.3427 15.0858 19.6998 14.6946C19.0568 14.3034 18.2957 14.1536 17.5524 14.2719C16.8091 14.3902 16.1322 14.769 15.6425 15.3405C15.1528 15.9121 14.8822 16.6391 14.8793 17.3917C14.8793 17.4333 14.8793 17.4738 14.8858 17.5142C14.348 17.6038 13.8635 17.8923 13.5284 18.3224C13.1933 18.7525 13.0322 19.2929 13.0769 19.8363C13.1217 20.3797 13.369 20.8865 13.7699 21.256C14.1709 21.6255 14.696 21.8309 15.2413 21.8313H21.4024V21.8225C22.0893 21.7771 22.7334 21.4725 23.2044 20.9704C23.6755 20.4683 23.9383 19.8061 23.9399 19.1177Z" fill="#0095DA"/> </g> </svg>                        36°
@@ -273,7 +295,7 @@
                     <li>
                         <svg xmlns="http://www.w3.org/2000/svg" width="29" height="28" viewBox="0 0 29 28" fill="none"> <g opacity="0.3"> <path d="M20.5823 17.7308C20.5823 16.7361 20.1871 15.7821 19.4838 15.0788C18.7804 14.3754 17.8265 13.9803 16.8318 13.9803C16.7574 13.9803 16.6852 13.9869 16.613 13.9912C16.2882 13.003 15.6219 12.1629 14.7337 11.6215C13.8454 11.0801 12.7933 10.873 11.7661 11.0372C10.7389 11.2014 9.80387 11.7263 9.12866 12.5176C8.45346 13.3089 8.08231 14.3149 8.08179 15.3552C8.08179 15.412 8.08836 15.4645 8.09054 15.5247C7.34821 15.6479 6.67936 16.0458 6.2168 16.6393C5.75424 17.2328 5.5318 17.9786 5.59364 18.7286C5.65548 19.4785 5.99709 20.1778 6.55062 20.6875C7.10416 21.1973 7.82915 21.4802 8.58164 21.4802H17.0823V21.4681C18.0308 21.4052 18.92 20.9841 19.5699 20.2902C20.2197 19.5963 20.5816 18.6814 20.5823 17.7308Z" fill="#0095DA"/> </g> <path d="M17.289 13.0025C18.4397 13.1159 19.5093 13.6456 20.2968 14.4922C20.9012 14.1755 21.4205 13.718 21.8108 13.1583C22.2011 12.5986 22.4508 11.9532 22.539 11.2766C21.8759 11.5049 21.162 11.5424 20.4787 11.3847C19.7953 11.2269 19.17 10.8804 18.6741 10.3846C18.1781 9.88873 17.8314 9.26352 17.6736 8.58021C17.5157 7.8969 17.553 7.18298 17.7812 6.51984C16.8403 6.64179 15.9674 7.07537 15.3017 7.75137C14.636 8.42738 14.2159 9.30687 14.1084 10.2495C14.7968 10.4702 15.4335 10.8278 15.9801 11.3009C16.5267 11.774 16.9719 12.3528 17.289 13.0025Z" fill="#0095DA"/> </svg>                        29°
                     </li>
-                </ul>
+                </ul> -->
                 <!-- End weather -->
             </div>
             <!-- End container -->
@@ -2540,7 +2562,7 @@
                     <div class="subinner">
                         <h2 class="title">
                             <a href="economy.html">
-                                economy
+                                Arabic and international
                                  <span>
                                     <i>More</i>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none"> <path d="M7 12L1.5 6.5L7 1" stroke="#0095DA" stroke-width="2" stroke-linecap="round"/> </svg>
@@ -2582,7 +2604,9 @@
                     <div class="subinner">
                         <h2 class="title">
                             <a href="sports.html">
-                                sports
+                                
+            Culture and arts
+            
                                   <span>
                                     <i>More</i>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none"> <path d="M7 12L1.5 6.5L7 1" stroke="#0095DA" stroke-width="2" stroke-linecap="round"/> </svg>
@@ -2624,7 +2648,9 @@
                     <div class="subinner">
                         <h2 class="title">
                             <a href="sweeteners.html">
-                                Sweeteners
+                                
+            Reports and discussions
+            
                                 <span>
                                     <i>More</i>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none"> <path d="M7 12L1.5 6.5L7 1" stroke="#0095DA" stroke-width="2" stroke-linecap="round"/> </svg>
@@ -2666,7 +2692,9 @@
                     <div class="subinner">
                         <h2 class="title">
                             <a href="arab-international.html">
-                                News
+                                
+            Miscellaneous
+            
                                   <span>
                                     <i>More</i>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 13" fill="none"> <path d="M7 12L1.5 6.5L7 1" stroke="#0095DA" stroke-width="2" stroke-linecap="round"/> </svg>
