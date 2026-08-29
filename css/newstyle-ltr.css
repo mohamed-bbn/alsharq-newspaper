@@ -40,29 +40,6 @@ textarea,
 .highcharts-yaxis-title {
   font: normal 500 15px / 28px "morvetratm-medium"; }
 
-@media (min-width: 1200px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl {
-    max-width: 1300px; } }
-@media (min-width: 1600px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1540px; } }
-@media (min-width: 1900px) {
-  .container,
-  .container-lg,
-  .container-md,
-  .container-sm,
-  .container-xl,
-  .container-xxl {
-    max-width: 1640px; } }
 .header .site-menu.sticky .logo {
   display: block; }
   @media (max-width: 1300px) {
@@ -100,7 +77,7 @@ textarea,
     margin-right: 13px; } }
 .header .site-menu .menu-item {
   margin-right: 16px; }
-  @media (max-width: 1300px) {
+  @media (max-width: 1100px) {
     .header .site-menu .menu-item {
       margin-right: 5px; } }
   @media (min-width: 1600px) {
@@ -140,19 +117,33 @@ textarea,
 
 .news-slider .carditem .photo {
   height: 196px; }
+  @media (min-width: 1400px) {
+    .news-slider .carditem .photo {
+      height: 240px; } }
 
 .slider-news__item .dialogues .interloc .photo {
   margin: 0; }
 
 .slider-news__item .dialogues .interloc {
   height: 180px; }
+  @media (min-width: 1400px) {
+    .slider-news__item .dialogues .interloc {
+      height: 193px; } }
 
 .slider-news__item .dialogues .articles-editor .inner .photo {
   height: 130px; }
+  @media (min-width: 1400px) {
+    .slider-news__item .dialogues .articles-editor .inner .photo {
+      height: 166px; } }
 .slider-news__item .dialogues .articles-editor .inner .title {
   margin-top: -15px;
   line-height: 34px;
   font-size: 22px; }
+  @media (min-width: 1400px) {
+    .slider-news__item .dialogues .articles-editor .inner .title {
+      margin: 0;
+      line-height: 38px;
+      font-size: 26px; } }
 
 .flextex .date {
   margin-left: 9px; }
@@ -187,5 +178,29 @@ textarea,
       font-size: 24px; } }
 .sectiongroup .title span {
   display: none; }
+
+.mediagroup-item .slider-container .category a .contant .title {
+  font-size: 14px; }
+
+.footer .item .logos {
+  height: auto; }
+.footer .icons {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin-top: 16px; }
+  .footer .icons .flex {
+    display: block; }
+    .footer .icons .flex p {
+      margin: 0;
+      text-align: center; }
+    .footer .icons .flex .app-icons {
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px; }
+      .footer .icons .flex .app-icons a {
+        margin: 0; }
+.footer .social {
+  margin-top: 16px; }
 
 /*# sourceMappingURL=newstyle-ltr.css.map */
