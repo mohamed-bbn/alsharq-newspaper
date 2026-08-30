@@ -203,4 +203,10 @@ textarea,
 .footer .social {
   margin-top: 16px; }
 
+.slider-news__item .news-slider .rowinner .itemslider .coverage .innercoverage {
+  border-radius: 0px 10px 10px 10px; }
+
+.slider-news__item .news-slider .rowinner .itemslider .coverage .sv-team {
+  margin-top: -16px; }
+
 /*# sourceMappingURL=newstyle-ltr.css.map */
