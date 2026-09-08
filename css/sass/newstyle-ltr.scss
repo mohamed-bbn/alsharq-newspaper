@@ -81,6 +81,7 @@
          &.sticky {
              .logo {
                  display: block;
+                 top: 4px;
                  @media (max-width: 1300px) {
                      display: none;
                  }

@@ -7556,4 +7556,26 @@ select.form-control {
   visibility: visible;
   transition: visibility 0s 0s, opacity 0.3s ease; }
 
+/*************************/
+.footer .item .logos {
+  height: auto; }
+.footer .icons {
+  display: block;
+  border: 0;
+  padding: 0;
+  margin-top: 16px; }
+  .footer .icons .flex {
+    display: block; }
+    .footer .icons .flex p {
+      margin: 0;
+      text-align: center; }
+    .footer .icons .flex .app-icons {
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px; }
+      .footer .icons .flex .app-icons a {
+        margin: 0; }
+.footer .social {
+  margin-top: 16px; }
+
 /*# sourceMappingURL=home.css.map */

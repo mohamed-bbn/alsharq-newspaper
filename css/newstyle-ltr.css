@@ -41,7 +41,8 @@ textarea,
   font: normal 500 15px / 28px "morvetratm-medium"; }
 
 .header .site-menu.sticky .logo {
-  display: block; }
+  display: block;
+  top: 4px; }
   @media (max-width: 1300px) {
     .header .site-menu.sticky .logo {
       display: none; } }
